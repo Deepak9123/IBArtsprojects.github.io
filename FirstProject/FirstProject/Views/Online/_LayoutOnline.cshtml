@@ -1,0 +1,654 @@
+﻿
+
+
+<!doctype html>
+
+<html class="no-js" lang="en-US" ng-app="myApp">
+
+
+<head>
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+
+    <meta name="theme-color" content="#ffffff">
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+    <title>heena Website</title>
+    <link rel='dns-prefetch' href='//maps.googleapis.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel="alternate" type="application/rss+xml" title="Industrio &raquo; Feed" href="https://shtheme.com/demosd/industrio1/?feed=rss2" />
+    <link rel="alternate" type="application/rss+xml" title="Industrio &raquo; Comments Feed" href="https://shtheme.com/demosd/industrio1/?feed=comments-rss2" />
+    <script type="text/javascript">
+        window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "~/Assets/js/wp-emoji-release.min.js?ver=4.9.18" } };
+        !function (e, a, t) { var n, r, o, i = a.createElement("canvas"), p = i.getContext && i.getContext("2d"); function s(e, t) { var a = String.fromCharCode; p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0); e = i.toDataURL(); return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL() } function c(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (o = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, r = 0; r < o.length; r++)t.supports[o[r]] = function (e) { if (!p || !p.fillText) return !1; switch (p.textBaseline = "top", p.font = "600 32px Arial", e) { case "flag": return s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) ? !1 : !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]); case "emoji": return !s([55358, 56760, 9792, 65039], [55358, 56760, 8203, 9792, 65039]) }return !1 }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (n = t.source || {}).concatemoji ? c(n.concatemoji) : n.wpemoji && n.twemoji && (c(n.twemoji), c(n.wpemoji))) }(window, document, window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    @*<script src="~/Scripts/angular.min.js"></script>*@
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Angular/Module.js"></script>
+    <script src="~/Angular/Online/OnlineService.js"></script>
+    <script src="~/Angular/Online/ViewJobDetailController.js"></script>
+    @RenderSection("head", required: false)
+    <link href="~/Content/assets/font/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/assets/font/font-awesome.min.css" rel="stylesheet" />
+    <link rel='stylesheet' id='contact-form-7-css' href='~/Assets/css/styles.css?ver=5.0.2' media='all' />
+    <link rel='stylesheet' id='woocommerce-layout-css' href='~/Assets/css/woocommerce-layout.css?ver=2.6.6' media='all' />
+    <link rel='stylesheet' id='woocommerce-smallscreen-css' href='~/Assets/css/woocommerce-smallscreen.css?ver=2.6.6' media='only screen and (max-width: 768px)' />
+    <link rel='stylesheet' id='woocommerce-general-css' href='~/Assets/css/woocommerce.css?ver=2.6.6' media='all' />
+    <link rel='stylesheet' id='settings-css' href='~/Assets/css/settings.css?ver=4.9.18' media='all' />
+    <link rel='stylesheet' id='layers-css' href='~/Assets/css/layers.css?ver=4.9.18' media='all' />
+    <link rel='stylesheet' id='navigation-css' href='~/Assets/css/navigation.css?ver=4.9.18' media='all' />
+    <link rel='stylesheet' id='industrio-style-css' href='~/Assets/css/style.css?ver=4.9.18' media='all' />
+    <link rel='stylesheet' id='responsive-css' href='~/Assets/css/responsive.css?ver=4.9.18' media='all' />
+    <link rel='stylesheet' id='industrio-css-css' href='~/Assets/css/style1.css?ver=2020-08-07' media='all' />
+    <link rel='stylesheet' id='elementor-icons-css' href='~/Assets/css/elementor-icons.min.css?ver=4.3.0' media='all' />
+    <link rel='stylesheet' id='font-awesome-css' href='~/Assets/css/font-awesome.min.css?ver=4.7.0' media='all' />
+    <link rel='stylesheet' id='elementor-animations-css' href='~/Assets/css/animations.min.css?ver=2.5.16' media='all' />
+    <link rel='stylesheet' id='elementor-frontend-css' href='~/Assets/css/frontend.min.css?ver=2.5.16' media='all' />
+    <link rel='stylesheet' id='elementor-global-css' href='~/Assets/css/global.css?ver=1571200942' media='all' />
+    <link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=4.9.18' media='all' />
+    <script src='~/Assets/js/jquery.js?ver=1.12.4'></script>
+    <script src='~/Assets/js/jquery-migrate.min.js?ver=1.4.1'></script>
+    <style class="options-output">
+        body {
+            font-weight: normal;
+            font-style: normal;
+            color: #333;
+        }
+
+        .input-container {
+            display: flex;
+            width: 250px;
+            border: 1px solid #ba54ea;
+            justify-content: space-between;
+        }
+            .input-button{
+                background:#ba54ea;
+            }
+
+            .input-container input:focus, .input-container input:active {
+                outline: none;
+            }
+
+            .input-container input {
+                border: none;
+            }
+
+        .foot a {
+            font-size: 20px;
+            padding: 5px;
+            margin-top: 15px;
+        }
+
+        .ind-header-top {
+            width: 100%;
+            padding: 10px 0px;
+            background-color: #0c101c;
+        }
+
+            .ind-header-top .header-welcome-note span {
+                color: #fff;
+            }
+
+            .ind-header-top .header-top-social a {
+                color: #fff;
+                margin-left: 20px;
+                -webkit-transition: .3s all ease-in-out;
+                -o-transition: .3s all ease-in-out;
+                transition: .3s all ease-in-out;
+            }
+
+        .float-left {
+            float: left !important;
+        }
+
+        .float-right {
+            float: right !important;
+        }
+
+        .services-button {
+            display: inline-block;
+            width: 172px;
+            height: 44px;
+            border: none;
+            outline: none;
+            background: #FE5A0E;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-family: 'Poppins';
+            font-weight: 600;
+            line-height: 44px;
+            padding-right: 20px;
+            margin-top: 5px;
+            text-align: center;
+        }
+    </style>
+    <link href="~/Assets/css/marquee/marquee.css" rel="stylesheet" />
+
+</head>
+
+<body class="home page-template page-template-page-templates page-template-home-1 page-template-page-templateshome-1-php page page-id-31 elementor-default elementor-page elementor-page-31">
+
+
+
+    <div class="preloader"><div class="spinner"></div></div> <!-- /.preloader -->
+    <!-- header start -->
+
+    <div class="page-wrapper">
+
+
+        <div class="header-top home-one clearfix">
+
+            <div class="container">
+
+                <div class="logo pull-left">
+
+                    <a href="/Online/Index">
+
+
+                        <img src="" alt="" style="width: 90px; float: left; margin-bottom: 4px; margin-top: 4px;">
+                        <p style="position:relative;color:#fff;font-size:28px;display:inline-block;padding-top:20px;padding-left:5px;">Brand Name<br /><br /></p>
+
+
+                    </a>
+
+                </div><!-- /.logo -->
+
+            </div><!-- /.container -->
+
+        </div><!-- /.header-top home-one -->
+
+
+
+        <header class="header header-home-one clearfix">
+
+            <nav class="navbar navbar-default header-navigation stricky clearfix">
+
+                <div class="container clearfix">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+
+                    <div class="navbar-header">
+
+                        <a href="/Online/Index"><button class="side-nav-toggler navtog"><i class="fa fa-home"></i></button></a>
+                        <button class="side-nav-toggler side-nav-opener"><i class="fa fa-bars"></i></button>
+                    </div>
+
+
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+
+                    <div class="collapse navbar-collapse main-navigation mainmenu " id="main-nav-bar">
+
+
+
+                        <ul class="nav navbar-nav navigation-box  ">
+
+                            @*<li id="menu-item-852" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-852">
+                                    <a title="About Us" href="/Online/About">About</a>
+                                    <ul role="menu" class=" dropdown-menu sub-menu">
+                                        <li id="menu-item-283" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-283"><a title="About JIADA" href="/Online/About">About JIADA</a></li>
+                                        <li id="menu-item-284" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-284"><a title="Board of Directors" href="/Online/Directors">Board of Directors</a></li>
+                                        <li id="menu-item-285" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-285"><a title="Organizational Structure" href="/Online/OrganizationalStructure">Organizational Structure</a></li>
+                                        <li id="menu-item-285" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-285"><a title="Organizational Objective" href="#">Organizational Objective</a></li>
+
+                                    </ul>
+                                </li>*@
+                            <li id="menu-item-853" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-853 dropdown submenu">
+                                <a title="Home" href="/Online/Home">Home<span class="subnav-toggler fa fa-caret-down"></span></a>
+                            </li>
+
+                            <li id="menu-item-292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-292 dropdown submenu">
+                                <a title="Product" href="/online/Product">Product<span class="subnav-toggler fa fa-caret-down"></span></a>
+
+                            </li>
+                            <li id="menu-item-298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-298 dropdown submenu">
+                                <a title="Picing" href="/Online/Picing">Picing<span class="subnav-toggler fa fa-caret-down"></span></a>
+
+                            </li>
+
+                            <li id="menu-item-292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-292 dropdown submenu">
+                                <a title="Contact " href="/Online/Contact">Contact<span class="subnav-toggler fa fa-caret-down"></span></a>
+
+                            </li>
+                            @*<li id="menu-item-856" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-856">
+                                    <a title="Important Link" href="#">Important Links</a>
+                                    <ul role="menu" class=" dropdown-menu sub-menu">
+                                        <li id="menu-item-857" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-857"><a title="Link 1" href="#">Acts &amp Policies</a></li>
+                                        <li id="menu-item-301" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-300"><a title="Link 2" href="#">Downloads</a></li>
+                                        <li id="menu-item-303" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-300"><a title="Link 3" href="#">Link 3</a></li>
+                                        <li id="menu-item-304" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-300"><a title="Link 4" href="#">Link 4</a></li>
+                                        <li id="menu-item-305" class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-300"><a title="Other Links" href="#">Other Links</a></li>
+                                    </ul>
+                                </li>*@
+
+                        </ul>
+
+                    </div><!-- /.navbar-collapse -->
+
+                    <div class="right-side-box">
+
+                        <a href="javascript:void(0);" class="rqa-btn" data-toggle="modal" data-target="#modal_login"><span class="inner">Login <i class="fa fa-caret-right"></i></span></a><br /><br />
+
+                        <button type="button" class="btn btn-primary">
+                            Become a member
+                            <i class="fa fa-arrow-right"></i>
+
+                        </button>
+
+                    </div><!-- /.right-side-box -->
+
+                </div><!-- /.container -->
+
+            </nav>
+
+        </header>
+
+        @RenderBody()
+
+    </div><!-- /.page-wrapper -->
+
+    <footer class="site-footer fixed-footer">
+
+        <div class="main-footer">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Brand Name</h4>
+                            <hr style="border-top: 1px solid #807070; width:1300px;">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="foot social" style="text-align:right;">
+
+                                <a href="#" class="fab fa-facebook-f"></a>
+                                <!--
+
+                                -->
+                                <a href="#" class="fab fa-twitter"></a>
+                                <!--
+
+                                -->
+                                <a href="#" class="fab fa-google-plus-g"></a>
+                                <!--
+
+                                -->
+                                <a href="#" class="fab fa-linkedin-in"></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+
+                        <div class="footer-widget about-widget">
+
+
+                            <a href="">
+
+                                <table>
+                                    <tr>
+
+                                        @*<td style="text-align:center;">
+                                                <img src="" alt="Awesome Image" style="width:90px;" />
+                                                <p style="line-height:18px;padding-top:10px;font-size:18px;">
+
+
+                                                </p>
+                                            </td>*@
+                                    </tr>
+                                </table>
+                            </a>
+
+                        </div>
+                        <div class="footer-widget links-widget">
+
+
+                            <div class="textwidget">
+                                <div class="title">
+                                    <h3>Company info </h3>
+                                </div>
+                                <p><!-- /.title --></p>
+                                <ul class="links-list">
+                                    <li><a href="/">About us</a></li>
+                                    <li><a href="#">Carrier</a></li>
+                                    <li><a href="#"> we are hiring</a></li>
+                                    <li><a href="#">Blog</a></li>
+
+                                </ul>
+                            </div>
+
+
+                        </div>
+                    </div><!-- /.col-md-3 -->
+
+
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+
+                        <div class="footer-widget links-widget">
+
+
+                            <div class="textwidget">
+                                <div class="title">
+                                    <h3>Logal </h3>
+                                </div>
+                                <p><!-- /.title --></p>
+                                <ul class="links-list">
+                                    <li><a href="/">About us</a></li>
+                                    <li><a href="#">Carrier</a></li>
+                                    <li><a href="#"> we are hiring</a></li>
+                                    <li><a href="#">Blog</a></li>
+
+                                </ul>
+                            </div>
+
+
+                        </div><!-- /.footer-widget links-widget -->
+
+                    </div><!-- /.col-md-2 -->
+
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+
+                        <div class="footer-widget services-widget">
+
+
+                            <div class="textwidget">
+                                <div class="title">
+                                    <h3>feature</h3>
+                                </div>
+                                <p><!-- /.title --></p>
+                                <ul class="links-list">
+                                    <li><a href="#">Business marketting</a></li>
+                                    <li><a href="#">User Analytic</a></li>
+                                    <li><a href="#">Live chat</a></li>
+                                    <li><a href="#">Unlimited Support</a></li>
+                                </ul>
+                            </div>
+
+
+                        </div><!-- /.footer-widget services-widget -->
+
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+
+                        <div class="footer-widget links-widget">
+
+
+                            <div class="textwidget">
+                                <div class="title">
+                                    <h3>Resourcse</h3>
+                                </div>
+                                <p><!-- /.title --></p>
+                                <ul class="links-list">
+                                    <li><a href="/">IOS &Aacute; Android</a></li>
+                                    <li><a href="#">Watch a Demo</a></li>
+                                    <li><a href="#">Customer</a></li>
+                                    <li><a href="#">APi</a></li>
+
+                                </ul>
+                            </div>
+
+
+                        </div><!-- /.footer-widget links-widget -->
+
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+
+                        <div class="footer-widget links-widget">
+
+
+                            <div class="textwidget">
+                                <div class="title">
+                                    <h3>Get In Touch</h3>
+                                </div>
+
+                            </div>
+                            <div class="input-container">
+                                <input type="text" placeholder="Your Email..." class="input-field" />
+                                <button class="input-button">Subscribe!</button>
+                            </div>
+                            <ul class="links-list">
+                                <li><a href="/">Loremimpsum dolor amit</a></li>
+                            </ul>
+                        </div><!-- /.footer-widget links-widget -->
+
+                    </div>
+
+                </div><!-- /.row -->
+
+            </div><!-- /.container -->
+
+        </div><!-- /.main-footer -->
+
+        <div class="bottom-footer">
+
+
+            <div class="left-text pull-left">
+                <p>
+
+                </p>
+            </div><!-- /.left-text -->
+
+            <div class="right-text pull-right">
+                <p>
+                    Created by  <a href=""></a>
+                </p>
+            </div><!-- /.right-text -->
+
+
+        </div><!-- /.bottom-footer -->
+        @*<div class="scroll-to-top scroll-to-target" data-target="html"><i class="fa fa-angle-up"></i></div>*@
+
+    </footer>
+
+    <section class="hidden-sidebar side-navigation">
+
+        <a href="#" class="close-button side-navigation-close-btn fa fa-times"></a><!-- /.close-button -->
+
+        <div class="sidebar-content">
+
+            <div class="top-content">
+
+                <a href="/">
+
+
+
+                </a>
+                <h2 class="displaynone"></h2>
+
+            </div><!-- /.top-content -->
+
+            <nav class="nav-menu middle-content">
+
+                <ul class="navigation-box  ">
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor @*current-menu-parent*@  nav-item menu-item-277 dropdown submenu active active">
+                        <a title="Home" href="/">Home</a>
+
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-852"><a title="About Us" href="#">About Us</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-853 dropdown submenu">
+                        <a title="Services" href="#">Services@*<span class="subnav-toggler fa fa-caret-down"></span>*@</a>
+
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-854 dropdown submenu">
+                        <a title="Data and Statistics" href="#">Statistics</a>
+
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-292 dropdown submenu">
+                        <a title="Employment Exchange Centre" href="#">EEC</a>
+                        <ul role="menu" class=" dropdown-menu sub-menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-293"><a title="Error 404" href="http://shtheme.com/demosd/industrio1/?page_id=123123">Error 404</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom nav-item menu-item-295"><a title="Project Details" href="http://shtheme.com/demosd/industrio1/?project=mechanical-works-5">Project Details</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-product nav-item menu-item-378"><a title="Product Details" href="https://shtheme.com/demosd/industrio1/?product=mechanical-tool-6">Product Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-298 dropdown submenu">
+                        <a title="Tenders" href="#">Tenders@*<span class="subnav-toggler fa fa-caret-down"></span>*@</a>
+
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-852"><a title="Investors Platform" href="#">Home</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-852"><a title="List of Industries" href="#">Product</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-852"><a title="Gallery" href="#">Pricing</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-852"><a title="Notices" href="#">Contact</a></li>
+
+                </ul>
+            </nav><!-- /.nav-menu -->
+
+            <div class="bottom-content">
+
+                <div class="foot social" style="text-align:center;">
+
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <!--
+
+                    -->
+                    <a href="#" class="fab fa-twitter"></a>
+                    <!--
+
+                    -->
+                    <a href="#" class="fab fa-google-plus-g"></a>
+                    <!--
+
+                    -->
+                    <a href="#" class="fab fa-linkedin-in"></a>
+
+                </div><!-- /.social -->
+
+                <p class="copy-text"> <br /> </p><!-- /.copy-text -->
+
+            </div><!-- /.bottom-content -->
+
+        </div><!-- /.sidebar-content -->
+
+    </section>
+
+
+
+
+
+    <div class="search_area zoom-anim-dialog mfp-hide" id="test-search">
+
+        <div class="search_box_inner">
+
+            <div class="input-group">
+
+                <input type="text" class="form-control" placeholder="Search for...">
+
+                <span class="input-group-btn">
+
+                    <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        /* <![CDATA[ */
+        var wpcf7 = { "apiSettings": { "root": "https:\/\/shtheme.com\/demosd\/industrio1\/index.php?rest_route=\/contact-form-7\/v1", "namespace": "contact-form-7\/v1" }, "recaptcha": { "messages": { "empty": "Please verify that you are not a robot." } } };
+        /* ]]> */
+    </script>
+    <script src='~/Assets/js/scripts.js?ver=5.0.2'></script>
+    <script>
+        /* <![CDATA[ */
+        var wc_add_to_cart_params = { "ajax_url": "\/demosd\/industrio1\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/demosd\/industrio1\/?wc-ajax=%%endpoint%%", "i18n_view_cart": "View Cart", "cart_url": "https:\/\/shtheme.com\/demosd\/industrio1\/?page_id=364", "is_cart": "", "cart_redirect_after_add": "no" };
+        /* ]]> */
+    </script>
+    <script src='~/Assets/js/add-to-cart.min.js?ver=2.6.6'></script>
+    <script src='~/Assets/js/jquery.blockUI.min.js?ver=2.70'></script>
+    <script>
+        /* <![CDATA[ */
+        var woocommerce_params = { "ajax_url": "\/demosd\/industrio1\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/demosd\/industrio1\/?wc-ajax=%%endpoint%%" };
+        /* ]]> */
+    </script>
+    <script src='~/Assets/js/woocommerce.min.js?ver=2.6.6'></script>
+    <script src='~/Assets/js/jquery.cookie.min.js?ver=1.4.1'></script>
+    <script>
+        /* <![CDATA[ */
+        var wc_cart_fragments_params = { "ajax_url": "\/demosd\/industrio1\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/demosd\/industrio1\/?wc-ajax=%%endpoint%%", "fragment_name": "wc_fragments" };
+        /* ]]> */
+    </script>
+    <script src='~/Assets/js/cart-fragments.min.js?ver=2.6.6'></script>
+    <script src='~/Assets/js/jquery1.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/bootstrap.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/bootstrap-select.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/jquery.validate.min.js?ver=4.9.18'></script>
+    <script src="~/Assets/js/owl.carousel.min.js"></script>
+    <script src='~/Assets/js/owl.carousel.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/isotope.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/jquery.magnific-popup.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/waypoints.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/jquery.counterup.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/wow.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/jquery.easing.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/jquery.countdown.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/jquery.appear.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/jquery.countTo.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/custom.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/gmaps.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/map-helper.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/jquery.themepunch.revolution.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/jquery.themepunch.tools.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/revolution.extension.actions.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/revolution.extension.carousel.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/revolution.extension.kenburn.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/revolution.extension.layeranimation.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/revolution.extension.migration.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/revolution.extension.navigation.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/revolution.extension.parallax.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/revolution.extension.slideanims.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/revolution.extension.video.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/main-slider-script.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/wp-embed.min.js?ver=4.9.18'></script>
+    <script src='~/Assets/js/bdevs-elementor.js?ver=1.0.0'></script>
+    <script src='~/Assets/js/frontend-modules.min.js?ver=2.5.16'></script>
+    <script src='~/Assets/js/position.min.js?ver=1.11.4'></script>
+    <script src='~/Assets/js/dialog.min.js?ver=4.7.1'></script>
+    <script src='~/Assets/js/waypoints.min.js?ver=4.0.2'></script>
+    <script src='~/Assets/js/swiper.min.js?ver=4.4.6'></script>
+    <script>
+        var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "version": "2.5.16", "urls": { "assets": "https:\/\/shtheme.com\/demosd\/industrio1\/wp-content\/plugins\/elementor\/assets\/" }, "settings": { "page": [], "general": { "elementor_global_image_lightbox": "yes", "elementor_enable_lightbox_in_editor": "yes" } }, "post": { "id": 31, "title": "Home Page One", "excerpt": "" } };
+    </script>
+    <script src='~/Assets/js/frontend.min.js?ver=2.5.16'></script>
+    <script src="~/Assets/js/marquee.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="~/Assets/js/marquee.js"></script>
+    <script>
+        $(function () {
+            $('.simple-marquee-container').SimpleMarquee();
+        });
+
+    </script>
+</body>
+
+</html>

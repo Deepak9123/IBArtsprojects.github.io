@@ -1,0 +1,160 @@
+﻿
+.paddingTopBot5RightLeft11 {
+    padding: 5px 11px;
+}
+
+@media (max-width:767px) {
+    .checkboxlist td {
+        white-space: nowrap;
+        display: inline-block;
+    }
+
+    .checkboxlist label {
+        font-weight: normal;
+        margin-right: 3px;
+    }
+    /*.customFormControl{padding:6px 7px;}*/
+}
+
+/* iPhone 6, 7, 8 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {
+    /* Styles */
+    .padding0-iphoneonly {
+        padding: 0px !important;
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+
+    .customFormControl {
+        padding: 6px 0px;
+    }
+
+    .margin0-iphoneonly {
+        margin: 0 !important
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) {
+    /* Styles */
+    .padding0-iphoneonly {
+        padding: 0px !important;
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+
+    .customFormControl {
+        padding: 6px 0px;
+    }
+
+    .margin0-iphoneonly {
+        margin: 0 !important
+    }
+}
+
+/* iPhone 6+, 7+, 8+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {
+    /* Styles */
+    .padding0-iphoneonly {
+        padding: 0px !important;
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+
+    .customFormControl {
+        padding: 6px 0px;
+    }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) {
+    /* Styles */
+    .padding0-iphoneonly {
+        padding: 0px !important;
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+
+    .customFormControl {
+        padding: 6px 0px;
+    }
+
+    .margin0-iphoneonly {
+        margin: 0 !important
+    }
+}
+
+/* iPhone X ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) {
+    /* Styles */
+    .padding0-iphoneonly {
+        padding: 0px !important;
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+
+    .customFormControl {
+        padding: 6px 0px;
+    }
+
+    .margin0-iphoneonly {
+        margin: 0 !important
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) {
+    /* Styles */
+    .padding0-iphoneonly {
+        padding: 0px !important;
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+
+    .customFormControl {
+        padding: 6px 0px;
+    }
+
+    .margin0-iphoneonly {
+        margin: 0 !important
+    }
+}
+
+/* iPhone XS Max, XR ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) {
+    /* Styles */
+    .padding0-iphoneonly {
+        padding: 0px !important;
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+
+    .customFormControl {
+        padding: 6px 0px;
+    }
+
+    .margin0-iphoneonly {
+        margin: 0 !important
+    }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) {
+    /* Styles */
+    .padding0-iphoneonly {
+        padding: 0px !important;
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+
+    .customFormControl {
+        padding: 6px 0px;
+    }
+
+    .margin0-iphoneonly {
+        margin: 0 !important
+    }
+}
+@media (min-width: 768px) {
+    .form-horizontal .control-label {
+        margin-bottom: 0;
+        padding-top: 0px;
+        text-align: right;
+    }
+}

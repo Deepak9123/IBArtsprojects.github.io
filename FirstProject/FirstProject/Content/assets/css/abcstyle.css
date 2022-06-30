@@ -1,0 +1,11 @@
+﻿@import url('../font/font-awesome.css');
+body {
+}
+
+input.ng-touched.ng-invalid, select.ng-touched.ng-invalid {
+    border-color: red;
+}
+
+input.ng-touched.ng-valid, select.ng-touched.ng-valid {
+    border-color: green;
+}

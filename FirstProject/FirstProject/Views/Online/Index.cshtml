@@ -1,0 +1,1121 @@
+﻿@{
+    ViewBag.Title = "Index";
+
+    Layout = "~/Views/Online/_LayoutOnline.cshtml";
+}
+
+<style>
+    .indulebe {
+        text-align: center;
+        color: #000000;
+    }
+
+    body {
+        font-family: 'Open Sans', San-Serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1 {
+        margin-top: 80px;
+        font-weight: bold;
+    }
+
+    p {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    /* Boostrap Buttons Styling */
+
+    .btn-default {
+        font-family: Raleway-SemiBold;
+        font-size: 13px;
+        color: rgba(108, 88, 179, 0.75);
+        letter-spacing: 1px;
+        line-height: 15px;
+        border: 2px solid rgba(108, 89, 179, 0.75);
+        border-radius: 40px;
+        background: transparent;
+        transition: all 0.3s ease 0s;
+    }
+
+        .btn-default:hover {
+            color: #FFF;
+            background: rgba(108, 88, 179, 0.75);
+            border: 2px solid rgba(108, 89, 179, 0.75);
+        }
+
+    .btn-primary {
+        font-family: Raleway-SemiBold;
+        font-size: 13px;
+        color: #fff;
+        letter-spacing: 1px;
+        line-height: 15px;
+        border: 2px solid blue;
+        border-radius: 40px;
+        /*background: transparent;*/
+        /*transition: all 0.3s ease 0s;*/
+    }
+
+    /*  .btn-primary:hover {
+            color: #FFF;
+            background: #FFF;
+            border: 2px solid rgba(58, 133, 191, 0.75);
+        }*/
+
+    .btn-success {
+        font-family: Raleway-SemiBold;
+        font-size: 13px;
+        color: rgba(103, 192, 103, 0.75);
+        letter-spacing: 1px;
+        line-height: 15px;
+        border: 2px solid rgba(103, 192, 103, 0.75);
+        border-radius: 40px;
+        background: transparent;
+        transition: all 0.3s ease 0s;
+    }
+
+        .btn-success:hover {
+            color: #FFF;
+            background: #FFF;
+            border: 2px solid rgb(103, 192, 103, 0.75);
+        }
+
+    .btn-info {
+        font-family: Raleway-SemiBold;
+        font-size: 13px;
+        color: blue;
+        letter-spacing: 1px;
+        line-height: 15px;
+        border: 2px solid rgba(91, 192, 222, 0.75);
+        border-radius: 40px;
+        background: transparent;
+        transition: all 0.3s ease 0s;
+    }
+
+        .btn-info:hover {
+            color: #FFF;
+            background: rgba(91, 192, 222, 0.75);
+            border: 2px solid rgba(91, 192, 222, 0.75);
+        }
+
+    .btn-warning {
+        font-family: Raleway-SemiBold;
+        font-size: 13px;
+        color: rgba(240, 173, 78, 0.75);
+        letter-spacing: 1px;
+        line-height: 15px;
+        border: 2px solid rgba(240, 173, 78, 0.75);
+        border-radius: 40px;
+        background: transparent;
+        transition: all 0.3s ease 0s;
+    }
+
+    .btn-round-lg {
+        border-radius: 22.5px;
+        color: blue;
+        background-color: #fff;
+    }
+
+    .btn-warning:hover {
+        color: #FFF;
+        background: rgb(240, 173, 78, 0.75);
+        border: 2px solid rgba(240, 173, 78, 0.75);
+    }
+
+    .btn-danger {
+        font-family: Raleway-SemiBold;
+        font-size: 13px;
+        color: rgba(217, 83, 78, 0.75);
+        letter-spacing: 1px;
+        line-height: 15px;
+        border: 2px solid rgba(217, 83, 78, 0.75);
+        border-radius: 40px;
+        background: transparent;
+        transition: all 0.3s ease 0s;
+    }
+
+        .btn-danger:hover {
+            color: #FFF;
+            background: rgba(217, 83, 78, 0.75);
+            border: 2px solid rgba(217, 83, 78, 0.75);
+        }
+
+    .img {
+        border-radius: 50%;
+    }
+</style>
+<main>
+
+    <div data-elementor-type="post" data-elementor-id="31" class="elementor elementor-31" data-elementor-settings="[]" ng-controller="IndexController">
+        <div class="elementor-inner">
+            <div class="elementor-section-wrap">
+                <section class="elementor-element elementor-element-6c0579f8 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="6c0579f8" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-5e46ad42 elementor-column elementor-col-100 elementor-top-column" data-id="5e46ad42" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-7f563d8c elementor-align-left elementor-widget elementor-widget-bdevs-slider" data-id="7f563d8c" data-element_type="widget" data-widget_type="bdevs-slider.default">
+                                            <div class="elementor-widget-container">
+                                                <!-- start of hero -->
+                                                <section class="main-slider">
+                                                    <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
+                                                        <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
+
+                                                            <ul>
+
+                                                                <li class="slide" data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="slotzoom-horizontal" data-hideafterloop="0" data-hideslideonmobile="off" data-index="" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="" data-title="Slide Title" data-transition="parallaxvertical">
+                                                                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="~/imges/big.jpg" />
+                                                                    <div class="tp-caption"
+                                                                         data-paddingbottom="[0,0,0,0]"
+                                                                         data-paddingleft="[0,0,0,0]"
+                                                                         data-paddingright="[0,0,0,0]"
+                                                                         data-paddingtop="[0,0,0,0]"
+                                                                         data-responsive_offset="on"
+                                                                         data-type="text"
+                                                                         data-height="none"
+                                                                         data-width="['650','750','700','420']"
+                                                                         data-whitespace="normal"
+                                                                         data-hoffset="['15','15','15','15']"
+                                                                         data-voffset="['-100','-80','-100','-80']"
+                                                                         data-x="['left','left','left','left']"
+                                                                         data-y="['middle','middle','middle','middle']"
+                                                                         data-textalign="['top','top','top','top']"
+                                                                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                                                                         style="z-index: 7; white-space: nowrap;">
+                                                                        <h2>
+                                                                            International.<br />
+                                                                            Network
+                                                                        </h2>
+
+                                                                    </div>
+
+                                                                    <div class="tp-caption"
+                                                                         data-paddingbottom="[0,0,0,0]"
+                                                                         data-paddingleft="[0,0,0,0]"
+                                                                         data-paddingright="[0,0,0,0]"
+                                                                         data-paddingtop="[0,0,0,0]"
+                                                                         data-responsive_offset="on"
+                                                                         data-type="text"
+                                                                         data-height="none"
+                                                                         data-width="['550','500','500','400']"
+                                                                         data-whitespace="normal"
+                                                                         data-hoffset="['15','15','15','15']"
+                                                                         data-voffset="['20','40','15','15']"
+                                                                         data-x="['left','left','left','left']"
+                                                                         data-y="['middle','middle','middle','middle']"
+                                                                         data-textalign="['top','top','top','top']"
+                                                                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                                                                         style="z-index: 7; white-space: nowrap;">
+                                                                        <div class="text white-text">We Know how large object will act ,</div>
+                                                                        <div class="text white-text">But things on a small scale</div><br />
+                                                                        <button type="button" class="btn btn-primary">Get Quote Now</button>
+                                                                        <button type="button" class="btn btn-primary">
+                                                                            Learn More
+                                                                            <i class="fa fa-arrow-right"></i>
+
+                                                                        </button>
+
+
+                                                                    </div>
+
+                                                                </li>
+
+
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </section>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="elementor-element elementor-element-310f001c elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="310f001c" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-14fc8ab4 elementor-column elementor-col-100 elementor-top-column" data-id="14fc8ab4" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-47c80b3b elementor-align-left elementor-widget elementor-widget-bdevs-service" data-id="47c80b3b" data-element_type="widget" data-widget_type="bdevs-service.default">
+                                            <div class="elementor-widget-container">
+                                                <!-- start services-section -->
+                                                <section class="service-style-two">
+                                                    <div class="container">
+                                                        <div class="service-carousel-style-two ">
+                                                            <div class="item">
+                                                                <div class="single-service-style-two">
+                                                                    <div class="img-box">
+                                                                        <img src="~/imges/big4.jpg" alt="Awesome Image" />
+                                                                    </div><!-- /.img-box -->
+                                                                    <div class="overlay">
+                                                                        <div class="box">
+                                                                            <div class="content">
+                                                                                <div class="icon-box">
+                                                                                    @*<i class="industrio-icon-drop-of-liquid"></i>*@
+                                                                                </div><!-- /.icon-box -->
+                                                                                <div class="text-box">
+                                                                                    <h3>Investment Trading</h3>
+                                                                                </div><!-- /.text-box -->
+                                                                            </div><!-- /.content -->
+                                                                        </div><!-- /.box -->
+                                                                    </div><!-- /.overlay -->
+                                                                    <div class="hover">
+                                                                        <div class="box">
+                                                                            <div class="content">
+                                                                                <div class="icon-box">
+                                                                                    <i class="industrio-icon-industry"></i>
+                                                                                </div><!-- /.icon-box -->
+                                                                                <div class="text-box">
+                                                                                    <h3>Investment Trading</h3>
+                                                                                    <p> the quick for jumps over the </p>
+                                                                                    <p>lazy dog</p>
+                                                                                    <a href="">
+                                                                                        Learn More<i class="fa fa-angle-right"></i>
+                                                                                    </a>
+                                                                                </div><!-- /.text-box -->
+                                                                            </div><!-- /.content -->
+                                                                        </div><!-- /.box -->
+                                                                    </div><!-- /.hover -->
+                                                                </div><!-- /.single-service-style-two -->
+                                                            </div><!-- /.item -->
+                                                            <div class="item">
+
+                                                                <div class="single-service-style-two">
+                                                                    <div class="img-box">
+
+                                                                        <img src="~/imges/big4.jpg" alt="Awesome Image" />
+                                                                    </div><!-- /.img-box -->
+                                                                    <div class="overlay">
+                                                                        <div class="box">
+                                                                            <div class="content">
+                                                                                <div class="icon-box">
+                                                                                    <i class="industrio-icon-industry"></i>
+                                                                                </div><!-- /.icon-box -->
+                                                                                <div class="text-box">
+                                                                                    <h3>Raising funds</h3>
+                                                                                </div><!-- /.text-box -->
+                                                                            </div><!-- /.content -->
+                                                                        </div><!-- /.box -->
+                                                                    </div><!-- /.overlay -->
+                                                                    <div class="hover">
+                                                                        <div class="box">
+                                                                            <div class="content">
+                                                                                <div class="icon-box">
+                                                                                    @*<i class="industrio-icon-industry"></i>*@
+                                                                                </div><!-- /.icon-box -->
+                                                                                <div class="text-box">
+                                                                                    <h3>financial Analysis</h3>
+                                                                                    <p> the quick for jumps over the </p>
+                                                                                    <p>lazy dog</p>
+                                                                                    <a href="">
+                                                                                        Learn More <i class="fa fa-angle-right"></i>
+                                                                                    </a>
+                                                                                </div><!-- /.text-box -->
+                                                                            </div><!-- /.content -->
+                                                                        </div><!-- /.box -->
+                                                                    </div><!-- /.hover -->
+                                                                </div><!-- /.single-service-style-two -->
+                                                            </div><!-- /.item -->
+                                                            <div class="item">
+                                                                <div class="single-service-style-two">
+                                                                    <div class="img-box">
+
+                                                                        <img src="~/imges/big4.jpg" alt="Awesome Image" />
+                                                                    </div><!-- /.img-box -->
+                                                                    <div class="overlay">
+                                                                        <div class="box">
+                                                                            <div class="content">
+                                                                                <div class="icon-box">
+                                                                                    @*<i class="industrio-icon-drop-of-liquid"></i>*@
+                                                                                </div><!-- /.icon-box -->
+                                                                                <div class="text-box">
+                                                                                    <h3>financial Analysis</h3>
+
+
+                                                                                </div><!-- /.text-box -->
+                                                                            </div><!-- /.content -->
+                                                                        </div><!-- /.box -->
+                                                                    </div><!-- /.overlay -->
+                                                                    <div class="hover">
+                                                                        <div class="box">
+                                                                            <div class="content">
+                                                                                <div class="icon-box">
+                                                                                    @*<i class="industrio-icon-industry"></i>*@
+                                                                                </div><!-- /.icon-box -->
+                                                                                <div class="text-box">
+                                                                                    <h3>financial Analysis</h3>
+                                                                                    <p> the quick for jumps over the </p>
+                                                                                    <p>lazy dog</p>
+                                                                                    <a href="">
+                                                                                        Learn More<i class="fa fa-angle-right"></i>
+                                                                                    </a>
+                                                                                </div><!-- /.text-box -->
+                                                                            </div><!-- /.content -->
+                                                                        </div><!-- /.box -->
+                                                                    </div><!-- /.hover -->
+                                                                </div><!-- /.single-service-style-two -->
+                                                            </div>
+
+                                                        </div><!-- /.service-carousel-style-two -->
+                                                    </div><!-- /.container -->
+                                                </section><!-- /.service-style-two -->
+                                                <!-- end services-section -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section class="elementor-element elementor-element-5a9ce789 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5a9ce789" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-122b671c elementor-column elementor-col-100 elementor-top-column" data-id="122b671c" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-52856166 elementor-align-left elementor-widget elementor-widget-bdevs-project" data-id="52856166" data-element_type="widget" data-widget_type="bdevs-project.default">
+                                            <div class="elementor-widget-container">
+                                                <section class="portfolio-style-two sec-pad">
+                                                    <div class="container">
+                                                        <div class="sec-title text-center">
+                                                            <h3>
+                                                                Better Strategy <br />
+                                                                with Quality Bussiness
+                                                            </h3>
+                                                            <p>Problem trying to resolve the confict between  </p>
+                                                            <p>the major realms of classical Physics Newtonian mechanics</p>
+                                                        </div>
+
+                                                        <div class="row masonary-layout filter-layout" data-filter-class="filter">
+
+                                                            <div class="col-md-4 col-sm-6 col-xs-12  ">
+                                                                <div class="card" style="border:1px solid #777; width:280px;height:250px;">
+                                                                    <div class="img-box">
+                                                                        <img src="" />
+                                                                        <div class="overlay">
+                                                                            <div class="box">
+                                                                                <div class="content">
+                                                                                    <h3 style="text-align:center; color:blue;">
+                                                                                        Outsourced
+                                                                                        Consulting Business
+                                                                                    </h3>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div style="text-align:center;">
+
+                                                                        <h4 class="indulebe" style="text-align:center;"></h4>
+                                                                        <p>
+                                                                            the quick fox jumps over the
+                                                                            lazy dog the quick fox jumps
+                                                                            over the lazy dog
+                                                                        </p>
+
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6 col-xs-12  ">
+                                                                <div class="card" style="border: 1px solid #777; width: 280px; height: 250px;">
+                                                                    <div class="img-box">
+                                                                        <img src="" />
+                                                                        <div class="overlay">
+                                                                            <div class="box">
+                                                                                <div class="content">
+                                                                                    <span></span>
+
+                                                                                    @*<span> <i class="fa fa-address-book"></i></span>*@
+                                                                                    <h3 style="text-align: center; color: blue;">
+                                                                                        Outsourced
+                                                                                        Consulting Business
+                                                                                    </h3>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div style="text-align:center;">
+
+                                                                        <h4 class="indulebe" style="text-align:center;"></h4>
+                                                                        <p>
+                                                                            the quick fox jumps over the
+                                                                            lazy dog the quick fox jumps
+                                                                            over the lazy dog
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6 col-xs-12  ">
+                                                                <div class="card" style="border: 1px solid #777; width: 280px; height: 250px;">
+                                                                    <div class="img-box">
+                                                                        <img src="" />
+                                                                        <div class="overlay">
+                                                                            <div class="box">
+                                                                                <div class="content">
+                                                                                    <span></span>
+
+                                                                                    @*<span> <i class="fa fa-address-book"></i></span>*@
+                                                                                    <h3 style="text-align: center; color: blue;">
+                                                                                        Outsourced
+                                                                                        Consulting Business
+                                                                                    </h3>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                    <div style="text-align:center;">
+
+                                                                        <h4 class="indulebe" style="text-align:center;"></h4>
+                                                                        <p>
+                                                                            the quick fox jumps over the
+                                                                            lazy dog the quick fox jumps
+                                                                            over the lazy dog
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                            </div>
+
+                                                            <div class="col-md-4 col-sm-6 col-xs-12  ">
+                                                                <div class="">
+                                                                    <div class="card" style="border: 1px solid #777; width: 280px; height: 250px;">
+                                                                        <div class="img-box">
+                                                                            <img src="" />
+                                                                            <div class="overlay">
+                                                                                <div class="box">
+                                                                                    <div class="content">
+                                                                                        <span></span>
+
+                                                                                        @*<span> <i class="fa fa-address-book"></i></span>*@
+                                                                                        <h3 style="text-align: center; color: blue;">
+                                                                                            Outsourced
+                                                                                            Consulting Business
+                                                                                        </h3>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div style="text-align:center;">
+
+                                                                            <h4 class="indulebe" style="text-align:center;"></h4>
+                                                                            <p>
+                                                                                the quick fox jumps over the
+                                                                                lazy dog the quick fox jumps
+                                                                                over the lazy dog
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6 col-xs-12  ">
+                                                                <div class="">
+                                                                    <div class="card" style="border: 1px solid #777; width: 280px; height: 250px;">
+                                                                        <div class="img-box">
+                                                                            <img src="" />
+                                                                            <div class="overlay">
+                                                                                <div class="box">
+                                                                                    <div class="content">
+                                                                                        <span></span>
+
+                                                                                        @*<span> <i class="fa fa-address-book"></i></span>*@
+                                                                                        <h3 style="text-align: center; color: blue;">
+                                                                                            Outsourced
+                                                                                            Consulting Business
+                                                                                        </h3>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div style="text-align:center;">
+
+                                                                            <h4 class="indulebe" style="text-align:center;"></h4>
+                                                                            <p>
+                                                                                the quick fox jumps over the
+                                                                                lazy dog the quick fox jumps
+                                                                                over the lazy dog
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6 col-xs-12  ">
+                                                                <div class="">
+                                                                    <div class="card" style="border: 1px solid #777; width: 280px; height: 250px;">
+                                                                        <div class="img-box">
+                                                                            <img src="" />
+                                                                            <div class="overlay">
+                                                                                <div class="box">
+                                                                                    <div class="content">
+                                                                                        <span></span>
+
+                                                                                        @*<span> <i class="fa fa-address-book"></i></span>*@
+                                                                                        <h3 style="text-align: center; color: blue;">
+                                                                                            Outsourced
+                                                                                            Consulting Business
+                                                                                        </h3>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div style="text-align:center;">
+
+                                                                            <h4 class="indulebe" style="text-align:center;"></h4>
+                                                                            <p>
+                                                                                the quick fox jumps over the
+                                                                                lazy dog the quick fox jumps
+                                                                                over the lazy dog
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <style>
+                                                        .about-btn {
+                                                            margin-top: 40px;
+                                                            display: inline-block;
+                                                            background: #FE5A0E;
+                                                            font-size: 16px;
+                                                            text-align: center;
+                                                            font-weight: 600;
+                                                            font-family: 'Poppins';
+                                                            line-height: 54px;
+                                                            width: 150px;
+                                                            color: #fff;
+                                                            -webkit-transition: all .4s ease;
+                                                            transition: all .4s ease;
+                                                            box-shadow: none;
+                                                            text-decoration: none;
+                                                        }
+                                                    </style>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="elementor-element elementor-element-5075d26 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5075d26" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-2a07db64 elementor-column elementor-col-100 elementor-top-column" data-id="2a07db64" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-5a17dbab elementor-align-left elementor-widget elementor-widget-bdevs-team" data-id="5a17dbab" data-element_type="widget" data-widget_type="bdevs-team.default">
+                                            <div class="elementor-widget-container">
+                                                <section class="team-style-one pb0">
+                                                    <div class="container" style="background-color:#badaec;padding-bottom:30px;padding-right:10px;padding-left:20px;">
+                                                        <div class="text-center">
+                                                            <h1 style="margin-top:0px;">
+                                                                Better Strategy<br />
+                                                                with Quality Business
+                                                            </h1>
+                                                            <p>
+                                                                Problems trying to resolve the conflict between<br />
+                                                                the two major realms of classical Physics : Newtonian mechanics
+                                                            </p>
+                                                            @*Team &amp; Advisory board*@
+                                                        </div><!-- /.sec-title -->
+
+                                                        <div class="col-md-6 col-sm-12 col-xs-12">
+                                                            <div class="card" style="border:1px solid black; width:520px;height:350px; background-color:#fff;">
+                                                                <div class="img-box">
+                                                                    <div class="overlay">
+                                                                        <div class="box">
+                                                                            <div class="content">
+                                                                                <span></span>
+
+                                                                                <img src="~/imges/img.png" class="rounded-circle" alt="Avatar" style="width:80px; border-radius:50% !important" />
+                                                                                <h3 style="text-align: center; color: blue;">
+                                                                                    Regina Miles <br />
+                                                                                    Designer
+                                                                                </h3>
+                                                                                @*<h2>Rounded Images</h2>*@
+                                                                                @*<img src="~/imges/img.png" class="" alt="Avatar" style="width:50px">*@
+
+                                                                                <center>
+                                                                                    <p>
+                                                                                        This Proved to  be impossible using the tradional concept<br />
+                                                                                        of space and time. Einstein developed a new view of time<br />
+                                                                                        first and then space. this proved to be impossible using<br />
+                                                                                        the traditional concepts of space and time. Einstein developed <br />
+                                                                                        a new view of time first and then space
+                                                                                    </p>
+                                                                                </center>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div style="text-align:center;">
+
+                                                                    <h4 class="indulebe" style="text-align:center;"></h4>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6 col-sm-12 col-xs-12">
+                                                            <div class="card" style="border: 1px solid black; width: 520px; height: 350px; background-color: #fff;">
+                                                                <div class="img-box">
+                                                                    <div class="overlay">
+                                                                        <div class="box">
+                                                                            <div class="content">
+                                                                                <span></span>
+
+                                                                                <img src="~/imges/img.png" class="rounded-circle" alt="Avatar" style="width:80px; border-radius:50% !important" />
+
+                                                                                <h3 style="text-align: center; color: blue;">
+                                                                                    Regina Miles <br />
+                                                                                    Designer
+                                                                                </h3>
+                                                                                <center>
+                                                                                    <p>
+                                                                                        This Proved to  be impossible using the tradional concept<br />
+                                                                                        of space and time. Einstein developed a new view of time<br />
+                                                                                        first and then space. this proved to be impossible using<br />
+                                                                                        the traditional concepts of space and time. Einstein developed <br />
+                                                                                        a new view of time first and then space
+                                                                                    </p>
+                                                                                </center>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div style="text-align:center;">
+                                                                    <h4 class="indulebe" style="text-align:center;"></h4>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- /.col-md-6 -->
+
+                                                    </div>
+                                                </section><!-- /.team-style-one -->
+                                            </div><!-- /.cotainer -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+
+
+                <section class="elementor-element elementor-element-1ac42434 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="1ac42434" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-6489cd48 elementor-column elementor-col-100 elementor-top-column" data-id="6489cd48" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-730b7c55 elementor-align-center elementor-widget elementor-widget-bdevs-brand" data-id="730b7c55" data-element_type="widget" data-widget_type="bdevs-brand.default">
+                                            <div class="elementor-widget-container">
+
+                                                <section class="brand-carousel-area">
+                                                    <div class="container">
+                                                        <div class="sec-title">
+                                                            <h2><span>Our</span><span>Partners</span></h2>
+                                                        </div>
+                                                        <div class="brand-carousel owl-carousel">
+
+
+
+                                                            <div class="item">
+                                                                <img src="~/imges/b22.jpg" />
+                                                            </div>
+                                                            <div class="item">
+                                                                <img src="~/imges/b13.jpg" />
+                                                            </div>
+                                                            <div class="item">
+
+                                                                <img src="~/imges/b12.jpg" />
+
+
+                                                            </div>
+                                                            <div class="item">
+                                                                <img src="~/imges/b11.jpg" />
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <img src="~/imges/b10.jpg" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="elementor-element elementor-element-2fc0aee9 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2fc0aee9" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-2c51d883 elementor-column elementor-col-100 elementor-top-column" data-id="2c51d883" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-5f10f64e elementor-align-left elementor-widget elementor-widget-bdevs-award" data-id="5f10f64e" data-element_type="widget" data-widget_type="bdevs-award.default">
+                                            <div class="elementor-widget-container">
+
+                                                <section class="award-winning">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-7">
+                                                                <div class="title">
+                                                                    <h3>
+                                                                        Subscribe for Latest<br />
+                                                                        Newsletter
+                                                                    </h3>
+                                                                    @*<p>You will find yourself working in a true partnership that results in an incredible experience, in an environment which supports tremendous growth.</p>*@
+                                                                </div><!-- /.title -->
+                                                            </div><!-- /.col-md-7 -->
+                                                            <div class="col-md-5">
+                                                                <div class="clearfix">
+                                                                    <section class="nlbf">
+                                                                        <form action="//smashingmagazine.us1.list-manage.com/subscribe/post?u=16b832d9ad4b28edf261f34df&amp;id=a1666656e0" method="post">
+                                                                            <div class="nlbwrapper">
+                                                                                <label for="mce-EMAIL-hp" class="sr-only">Your (smashing) email</label><div class="nlbgroup">
+                                                                                    <input type="email" name="EMAIL" class="nlbf-email" id="mce-EMAIL-hp" placeholder="Your email">
+                                                                                    <input type="submit" value="Subscribe!" name="subscribe" class="btn btn-primary">
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                        <style>
+                                                                            .c-garfield-the-cat .nlbwrapper {
+                                                                                margin-bottom: 0
+                                                                            }
+
+                                                                            .nlbf {
+                                                                                display: flex;
+                                                                                padding-bottom: .25em;
+                                                                                padding-top: .5em;
+                                                                                text-align: center;
+                                                                                letter-spacing: -.5px;
+                                                                                color: #fff;
+                                                                                font-size: 1.15em
+                                                                            }
+
+                                                                            .nlbgroup:hover {
+                                                                                box-shadow: 0 1px 7px -5px rgba(50,50,93,.25),0 3px 16px -8px rgba(0,0,0,.3),0 -6px 16px -6px rgba(0,0,0,.025)
+                                                                            }
+
+                                                                            .nlbf .nlbf-button, .nlbf .nlbf-email {
+                                                                                flex-grow: 1;
+                                                                                flex-shrink: 0;
+                                                                                width: auto;
+                                                                                margin: 0;
+                                                                                padding: .75em 1em;
+                                                                                border: 0;
+                                                                                border-radius: 11px;
+                                                                                background: #fff;
+                                                                                font-size: 1em;
+                                                                                box-shadow: none
+                                                                            }
+
+                                                                            .promo-box .nlbf-button:focus, .promo-box input.nlbf-email:active, .promo-box input.nlbf-email:focus {
+                                                                                box-shadow: none
+                                                                            }
+
+                                                                            .nlbf-button:-ms-input-placeholder, .nlbf-email:-ms-input-placeholder {
+                                                                                color: #777;
+                                                                                font-style: italic
+                                                                            }
+
+                                                                            .nlbf-button::-webkit-input-placeholder, .nlbf-email::-webkit-input-placeholder {
+                                                                                color: #777;
+                                                                                font-style: italic
+                                                                            }
+
+                                                                            .nlbf-button:-ms-input-placeholder, .nlbf-button::-moz-placeholder, .nlbf-button::placeholder, .nlbf-email:-ms-input-placeholder, .nlbf-email::-moz-placeholder, .nlbf-email::placeholder {
+                                                                                color: #777;
+                                                                                font-style: italic
+                                                                            }
+
+                                                                            .nlbf .nlbf-button {
+                                                                                transition: all .2s ease-in-out;
+                                                                                color: #fff;
+                                                                                background-color: #0168b8;
+                                                                                font-weight: 700;
+                                                                                box-shadow: 0 1px 1px rgba(0,0,0,.3);
+                                                                                width: 100%;
+                                                                                border: 0;
+                                                                                border-left: 1px solid #ddd;
+                                                                                flex: 2;
+                                                                                border-top-left-radius: 0;
+                                                                                border-bottom-left-radius: 0
+                                                                            }
+
+                                                                            .nlbf .nlbf-email {
+                                                                                border-top-right-radius: 0;
+                                                                                border-bottom-right-radius: 0;
+                                                                                width: 100%;
+                                                                                flex: 4;
+                                                                                min-width: 150px
+                                                                            }
+
+                                                                            .nlbf .nlbf-button, .nlbf .nlbf-email {
+                                                                                border-radius: 11px;
+                                                                                border-left: none
+                                                                            }
+
+                                                                            .nlbf .nlbf-email {
+                                                                                box-shadow: 0 13px 27px -5px rgba(50,50,93,.25),0 8px 16px -8px rgba(0,0,0,.3),0 -6px 16px -6px rgba(0,0,0,.025);
+                                                                                min-width: 100%
+                                                                            }
+
+                                                                            .nlbf .nlbf-button {
+                                                                                margin-top: 1em;
+                                                                                box-shadow: 0 1px 1px rgba(0,0,0,.5)
+                                                                            }
+
+                                                                            
+
+                                                                            .nlbf .nlbf-button:active, .nlbf .nlbf-button:focus, .nlbf .nlbf-button:hover {
+                                                                                cursor: pointer;
+                                                                                color: #fff;
+                                                                                background-color: #0168b8;
+                                                                                border-color: #dadada;
+                                                                                box-shadow: 0 1px 1px rgba(0,0,0,.3)
+                                                                            }
+
+                                                                            .nlbf .nlbf-button:active, .nlbf .nlbf-button:focus {
+                                                                                outline: 0 !important;
+                                                                                text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+                                                                                box-shadow: inset 0 3px 3px rgba(0,0,0,.3)
+                                                                            }
+
+                                                                            .nlbgroup {
+                                                                                display: flex;
+                                                                                box-shadow: 0 13px 27px -5px rgba(50,50,93,.25),0 8px 16px -8px rgba(0,0,0,.3),0 -6px 16px -6px rgba(0,0,0,.025);
+                                                                                border-radius: 11px;
+                                                                                transition: box-shadow .2s ease-in-out
+                                                                            }
+
+                                                                            .nlbwrapper {
+                                                                                display: flex;
+                                                                                flex-direction: column;
+                                                                                justify-content: center
+                                                                            }
+
+                                                                            .nlbf form {
+                                                                                width: 100%
+                                                                            }
+
+                                                                            .nlbf .nlbgroup {
+                                                                                margin: 0
+                                                                            }
+
+                                                                            .nlbcaption {
+                                                                                font-size: .9em;
+                                                                                line-height: 1.5em;
+                                                                                color: #fff;
+                                                                                border-radius: 11px;
+                                                                                padding: .5em 1em;
+                                                                                display: inline-block;
+                                                                                background-color: #0067b859;
+                                                                                text-shadow: 1px 1px 1px rgba(0,0,0,.3)
+                                                                            }
+
+                                                                            .wf-loaded-stage2 .nlbf .nlbf-button {
+                                                                                font-family: Mija
+                                                                            }
+
+                                                                            .mts {
+                                                                                margin-top: 5px !important
+                                                                            }
+
+                                                                            .mbn {
+                                                                                margin-bottom: 0 !important
+                                                                            }
+                                                                        </style>
+                                                                    </section>
+                                                                </div> <!-- /.img-box -->
+                                                            </div><!-- /.col-md-5 -->
+                                                        </div><!-- /.row -->
+                                                    </div><!-- /.contianer -->
+                                                </section><!-- /.award-winning -->
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="elementor-element elementor-element-5075d26 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5075d26" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-2a07db64 elementor-column elementor-col-100 elementor-top-column" data-id="2a07db64" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-5a17dbab elementor-align-left elementor-widget elementor-widget-bdevs-team" data-id="5a17dbab" data-element_type="widget" data-widget_type="bdevs-team.default">
+                                            <div class="elementor-widget-container">
+                                                <section class="team-style-one pb0">
+                                                    <div class="container" style="padding-bottom:30px;padding-right:10px;padding-left:20px;">
+                                                        <div class="text-center">
+                                                            <h1 style="margin-top:30px;">
+                                                                Pricing
+                                                            </h1>
+                                                            <p>
+                                                                Problems trying to resolve the conflict between<br />
+                                                                the two major realms of classical Physics : Newtonian mechanics
+                                                            </p>
+                                                            @*Team &amp; Advisory board*@
+                                                        </div><!-- /.sec-title -->
+
+                                                        <div class="col-md-6 col-sm-12 col-xs-12">
+                                                            <div class="card" style="border:2px solid #02eae7; width:300px; margin-left:180px; background-color:#fff;">
+                                                                <div class="img-box">
+                                                                    <div class="overlay">
+                                                                        <div class="box">
+                                                                            <div class="content">
+                                                                                <span></span>
+
+                                                                                @*<img src="" class="rounded-circle" alt="Avatar" style="width:80px; border-radius:50% !important" />*@
+                                                                                <h3 style="text-align: center; color: #000000;">
+                                                                                    FREE <br />
+
+                                                                                </h3>
+                                                                                <p style="text-align:center;color:#777">
+                                                                                    Organize across all<br />
+                                                                                    apps by hand
+                                                                                </p>
+                                                                                @*<h2>Rounded Images</h2>*@
+                                                                                @*<img src="~/imges/img.png" class="" alt="Avatar" style="width:50px">*@
+
+                                                                                <center>
+                                                                                    <p>
+                                                                                        <i class="fa fa-check-circle" style="font-size:32px;color:forestgreen;"></i>Unlimited Product updates<br />
+
+                                                                                        <i class="fa fa-check-circle" style="font-size:32px;color:forestgreen;"></i>Unlimited Product updates<br />
+
+                                                                                        <i class="fa fa-check-circle" style="font-size:32px;color:forestgreen;"></i>Unlimited Product updates<br />
+
+                                                                                        <i class="fa fa-check-circle" style="font-size:32px;color:#777;"></i> &nbsp; I GB Cloud Storage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+
+                                                                                        <i class="fa fa-check-circle" style="font-size:32px;color:#777;"></i>  &nbsp;&nbsp;&nbsp;&nbsp;   Email and Community <br />
+                                                                                        Support
+
+                                                                                    </p>
+                                                                                    <button type="button" class="btn btn-primary">Try for free</button>
+                                                                                </center>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div style="text-align:center;">
+
+                                                                    <h4 class="indulebe" style="text-align:center;"></h4>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6 col-sm-12 col-xs-12">
+                                                            <div class="card" style="border: 2px solid #02eae7; width: 300px; background-color: #fff;">
+                                                                <div class="img-box">
+                                                                    <div class="overlay">
+                                                                        <div class="box">
+                                                                            <div class="content">
+                                                                                <span></span>
+
+                                                                                @*<img src="" class="rounded-circle" alt="Avatar" style="width:80px; border-radius:50% !important" />*@
+
+                                                                                <h3 style="text-align: center; color:#000000;">
+                                                                                    STANDARD
+                                                                                </h3>
+                                                                                <p style="text-align:center;color:#777">
+                                                                                    Organize across all<br />
+                                                                                    apps by hand
+                                                                                </p>
+                                                                                <center>
+                                                                                    <p>
+                                                                                        <i class="fa fa-check-circle" style="font-size:32px;color:forestgreen;"></i>Unlimited Product updates<br />
+                                                                                        <i class="fa fa-check-circle" style="font-size:32px;color:forestgreen;"></i>Unlimited Product updates<br />
+                                                                                        <i class="fa fa-check-circle" style="font-size:32px;color:forestgreen;"></i>Unlimited Product updates<br />
+                                                                                        <i class="fa fa-check-circle" style="font-size:32px;color:forestgreen;"></i>&nbsp; I GB Cloud Storage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+                                                                                        <i class="fa fa-check-circle" style="font-size:32px;color:forestgreen;"></i>&nbsp;&nbsp;&nbsp;&nbsp;   Email and Community<br />
+                                                                                        support
+                                                                                    </p>
+
+                                                                                    <button type="button" class="btn btn-primary">Buy Now</button>
+
+                                                                                </center>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div style="text-align:center;">
+                                                                    <h4 class="indulebe" style="text-align:center;"></h4>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- /.col-md-6 -->
+
+                                                    </div>
+                                                </section><!-- /.team-style-one -->
+                                            </div><!-- /.cotainer -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> <!-- /.team-style-one -->
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+</main>

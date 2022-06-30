@@ -1,0 +1,947 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EE03F81B-8AE7-488C-82D6-5C2EF531192F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FirstProject</RootNamespace>
+    <AssemblyName>FirstProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44315</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OnlineController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Angular\ConstantData.js" />
+    <Content Include="Angular\LoadDataService.js" />
+    <Content Include="Angular\Module.js" />
+    <Content Include="Angular\Online\Module.js" />
+    <Content Include="Angular\Online\OnlineService.js" />
+    <Content Include="Assets\Captcha.css" />
+    <Content Include="Assets\css\animate.min.css" />
+    <Content Include="Assets\css\animations.min.css" />
+    <Content Include="Assets\css\bootstrap-select.min.css" />
+    <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\css\elementor-icons.min.css" />
+    <Content Include="Assets\css\font-awesome.min.css" />
+    <Content Include="Assets\css\fontawesome-all.min.css" />
+    <Content Include="Assets\css\frontend.min.css" />
+    <Content Include="Assets\css\global.css" />
+    <Content Include="Assets\css\hover-min.css" />
+    <Content Include="Assets\css\icofont.css" />
+    <Content Include="Assets\css\jquery.bootstrap-touchspin.css" />
+    <Content Include="Assets\css\jquery.bxslider.min.css" />
+    <Content Include="Assets\css\layers.css" />
+    <Content Include="Assets\css\magnific-popup.css" />
+    <Content Include="Assets\css\marquee\example.css" />
+    <Content Include="Assets\css\marquee\marquee.css" />
+    <Content Include="Assets\css\navigation.css" />
+    <Content Include="Assets\css\nouislider.css" />
+    <Content Include="Assets\css\nouislider.pips.css" />
+    <Content Include="Assets\css\owl.carousel.css" />
+    <Content Include="Assets\css\owl.theme.default.min.css" />
+    <Content Include="Assets\css\regcss.css" />
+    <Content Include="Assets\css\responsive.css" />
+    <Content Include="Assets\css\settings.css" />
+    <Content Include="Assets\css\strucss.css" />
+    <Content Include="Assets\css\style.css" />
+    <Content Include="Assets\css\style1.css" />
+    <Content Include="Assets\css\style2.css" />
+    <Content Include="Assets\css\style3.css" />
+    <Content Include="Assets\css\styles.css" />
+    <Content Include="Assets\css\woocommerce-layout.css" />
+    <Content Include="Assets\css\woocommerce-smallscreen.css" />
+    <Content Include="Assets\css\woocommerce.css" />
+    <Content Include="Assets\fonts\bands-icon.svg" />
+    <Content Include="Assets\fonts\fa-brands-400.svg" />
+    <Content Include="Assets\fonts\fa-regular-400.svg" />
+    <Content Include="Assets\fonts\fa-solid-900.svg" />
+    <Content Include="Assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\fonts\icofont.svg" />
+    <Content Include="Assets\fonts\industrio-icon.svg" />
+    <Content Include="Assets\fonts\revicons.svg" />
+    <Content Include="Assets\gallerycss\demo.css" />
+    <Content Include="Assets\gallerycss\normalize.min.css" />
+    <Content Include="Assets\gallerycss\style.css" />
+    <Content Include="Assets\galleryjs\gajs.js" />
+    <Content Include="Assets\galleryjs\gallery.js" />
+    <Content Include="Assets\galleryjs\jquery.min.js" />
+    <Content Include="Assets\graduated.png" />
+    <Content Include="Assets\images\about-3-1-new.png" />
+    <Content Include="Assets\images\android-app-button.png" />
+    <Content Include="Assets\images\cm_jharkhand.jpg" />
+    <Content Include="Assets\images\cont.jpg" />
+    <Content Include="Assets\images\download1.png" />
+    <Content Include="Assets\images\download2.png" />
+    <Content Include="Assets\images\inner-banner-1-1.jpg" />
+    <Content Include="Assets\images\Jitendra-Kumar-Sing-IAS-JH.jpg" />
+    <Content Include="Assets\images\Keerthimam_image.jpg" />
+    <Content Include="Assets\images\ms_pooja_singhal.jpg" />
+    <Content Include="Assets\images\new.gif" />
+    <Content Include="Assets\images\partners\partner-1.png" />
+    <Content Include="Assets\images\partners\partner-2.png" />
+    <Content Include="Assets\images\partners\partner-3.png" />
+    <Content Include="Assets\images\partners\partner-4.png" />
+    <Content Include="Assets\images\partners\partner-5.png" />
+    <Content Include="Assets\images\servicon1.svg" />
+    <Content Include="Assets\images\servicon2.svg" />
+    <Content Include="Assets\images\servicon3.svg" />
+    <Content Include="Assets\images\servicon4.svg" />
+    <Content Include="Assets\images\timeline-1.jpg" />
+    <Content Include="Assets\images\timeline-2.jpg" />
+    <Content Include="Assets\images\timeline-3.jpg" />
+    <Content Include="Assets\images\timeline-4.jpg" />
+    <Content Include="Assets\images\timeline-5.jpg" />
+    <Content Include="Assets\job-interview.png" />
+    <Content Include="Assets\js\add-to-cart.min.js" />
+    <Content Include="Assets\js\bdevs-elementor.js" />
+    <Content Include="Assets\js\bootstrap-select.min.js" />
+    <Content Include="Assets\js\bootstrap.min.js" />
+    <Content Include="Assets\js\cart-fragments.min.js" />
+    <Content Include="Assets\js\custom.js" />
+    <Content Include="Assets\js\dialog.min.js" />
+    <Content Include="Assets\js\frontend-modules.min.js" />
+    <Content Include="Assets\js\frontend.min.js" />
+    <Content Include="Assets\js\gmaps.js" />
+    <Content Include="Assets\js\isotope.js" />
+    <Content Include="Assets\js\jquery-migrate.min.js" />
+    <Content Include="Assets\js\jquery.appear.js" />
+    <Content Include="Assets\js\jquery.blockUI.min.js" />
+    <Content Include="Assets\js\jquery.cookie.min.js" />
+    <Content Include="Assets\js\jquery.countdown.min.js" />
+    <Content Include="Assets\js\jquery.counterup.min.js" />
+    <Content Include="Assets\js\jquery.countTo.js" />
+    <Content Include="Assets\js\jquery.easing.min.js" />
+    <Content Include="Assets\js\jquery.js" />
+    <Content Include="Assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="Assets\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="Assets\js\jquery.themepunch.tools.min.js" />
+    <Content Include="Assets\js\jquery.validate.min.js" />
+    <Content Include="Assets\js\jquery1.js" />
+    <Content Include="Assets\js\main-slider-script.js" />
+    <Content Include="Assets\js\map-helper.js" />
+    <Content Include="Assets\js\marquee.js" />
+    <Content Include="Assets\js\owl.carousel.min.js" />
+    <Content Include="Assets\js\position.min.js" />
+    <Content Include="Assets\js\revolution.extension.actions.min.js" />
+    <Content Include="Assets\js\revolution.extension.carousel.min.js" />
+    <Content Include="Assets\js\revolution.extension.kenburn.min.js" />
+    <Content Include="Assets\js\revolution.extension.layeranimation.min.js" />
+    <Content Include="Assets\js\revolution.extension.migration.min.js" />
+    <Content Include="Assets\js\revolution.extension.navigation.min.js" />
+    <Content Include="Assets\js\revolution.extension.parallax.min.js" />
+    <Content Include="Assets\js\revolution.extension.slideanims.min.js" />
+    <Content Include="Assets\js\revolution.extension.video.min.js" />
+    <Content Include="Assets\js\scripts.js" />
+    <Content Include="Assets\js\swiper.min.js" />
+    <Content Include="Assets\js\waypoints.min.js" />
+    <Content Include="Assets\js\waypoints1.min.js" />
+    <Content Include="Assets\js\woocommerce.min.js" />
+    <Content Include="Assets\js\wow.min.js" />
+    <Content Include="Assets\js\wp-embed.min.js" />
+    <Content Include="Assets\js\wp-emoji-release.min.js" />
+    <Content Include="Content\assets\css\abcstyle.css" />
+    <Content Include="Content\assets\css\bootstrap.min.css" />
+    <Content Include="Content\assets\css\bootstrap_limitless.min.css" />
+    <Content Include="Content\assets\css\colors.min.css" />
+    <Content Include="Content\assets\css\components.min.css" />
+    <Content Include="Content\assets\css\layout.min.css" />
+    <Content Include="Content\assets\font\font-awesome.css" />
+    <Content Include="Content\assets\font\font-awesome.min.css" />
+    <Content Include="Content\assets\font\fontawesome-webfont.svg" />
+    <Content Include="Content\assets\js\app.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\global_assets\css\extras\animate.min.css" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-brands-400.svg" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-regular-400.svg" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-solid-900.svg" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\styles.min.css" />
+    <Content Include="Content\global_assets\css\icons\icomoon\fonts\icomoone627.svg" />
+    <Content Include="Content\global_assets\css\icons\icomoon\styles.min.css" />
+    <Content Include="Content\global_assets\css\icons\material\fonts\material-icons119d.svg" />
+    <Content Include="Content\global_assets\css\icons\material\styles.min.css" />
+    <Content Include="Content\global_assets\demo_data\maps\vector\gdp_demo_data.js" />
+    <Content Include="Content\global_assets\js\demo_charts\c3\c3_advanced.js" />
+    <Content Include="Content\global_assets\js\demo_charts\c3\c3_axis.js" />
+    <Content Include="Content\global_assets\js\demo_charts\c3\c3_bars_pies.js" />
+    <Content Include="Content\global_assets\js\demo_charts\c3\c3_grid.js" />
+    <Content Include="Content\global_assets\js\demo_charts\c3\c3_lines_areas.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\bars\bars_advanced_hierarchical.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\bars\bars_advanced_histogram.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\bars\bars_advanced_simple_interaction.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\bars\bars_advanced_sortable_horizontal.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\bars\bars_advanced_sortable_vertical.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\bars\bars_advanced_stacked_multiple.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\bars\bars_basic_grouped.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\bars\bars_basic_horizontal.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\bars\bars_basic_stacked.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\bars\bars_basic_stacked_normalized.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\bars\bars_basic_tooltip.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\bars\bars_basic_vertical.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\chords\chord_arcs.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\chords\chord_basic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\chords\chord_chart.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\chords\chord_tweens.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\lines\lines_advanced_difference.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\lines\lines_advanced_missing.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\lines\lines_advanced_small_multiples.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\lines\lines_advanced_spline_transition.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\lines\lines_advanced_transitions.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\lines\lines_advanced_zoom.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\lines\lines_basic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\lines\lines_basic_area.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\lines\lines_basic_bivariate.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\lines\lines_basic_gradient.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\lines\lines_basic_multi_series.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\lines\lines_basic_stacked.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\lines\lines_basic_stacked_nest.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\other\bubbles.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\other\treemap.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\other\waterfall.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\pies\donut_arc_tween.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\pies\donut_basic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\pies\donut_entry_animation.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\pies\donut_multiple.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\pies\donut_multiple_nesting.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\pies\donut_update.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\pies\pie_arc_tween.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\pies\pie_basic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\pies\pie_entry_animation.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\pies\pie_multiple.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\pies\pie_multiple_nesting.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\pies\pie_update.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\sunburst\sunburst_basic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\sunburst\sunburst_combined.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\sunburst\sunburst_distortion.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\sunburst\sunburst_zoom.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\tree\tree_basic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\tree\tree_bracket.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\tree\tree_collapsible.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\tree\tree_dendrogram.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\tree\tree_dendrogram_radial.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\tree\tree_radial.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\venn\venn_basic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\venn\venn_colors.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\venn\venn_interactive.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\venn\venn_rings.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\venn\venn_tooltip.js" />
+    <Content Include="Content\global_assets\js\demo_charts\d3\venn\venn_weighted.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\bars\bars_basic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\bars\bars_floating.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\bars\bars_line.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\bars\bars_stacked.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\bars\bars_stacked_clustered.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\bars\columns_basic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\bars\columns_stacked.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\bars\columns_stacked_clustered.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\bars\columns_thermometer.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\bars\columns_timeline.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\bars\tornado_negative_stack.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\bars\tornado_staggered.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\bars\waterfall_change.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\bars\waterfall_compositive.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\calendars\calendar_multiple.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\calendars\calendar_single.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\candlesticks\candlestick_basic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\candlesticks\candlestick_line.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\candlesticks\candlestick_scatter.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\funnels\funnel_basic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\funnels\funnel_left.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\funnels\funnel_multiple_overlay.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\funnels\funnel_multiple_separate.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\funnels\funnel_right.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\funnels\funnel_sorting.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\gauge\gauge_basic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\gauge\gauge_custom.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\lines\area_basic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\lines\area_multiple.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\lines\area_point_values.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\lines\area_reversed_axis.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\lines\area_stacked.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\lines\area_zoom.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\lines\lines_basic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\lines\lines_inverted_axes.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\lines\lines_multiple.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\lines\lines_point_values.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\lines\lines_stacked.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\lines\lines_zoom.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\pies\pie_basic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\pies\pie_donut.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\pies\pie_infographic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\pies\pie_levels.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\pies\pie_multiple.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\pies\pie_nested.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\pies\pie_rose.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\pies\pie_rose_labels.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\pies\pie_timeline.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\radar\radar_basic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\radar\radar_filled.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\scatter\scatter_basic.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\scatter\scatter_category.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\scatter\scatter_punch.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\scatter\scatter_roaming.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\scatter\scatter_scale.js" />
+    <Content Include="Content\global_assets\js\demo_charts\echarts\light\scatter\scatter_size.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\bars\bar.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\bars\bar_stacked.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\bars\column.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\bars\column_stacked.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\bars\combo.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\bars\histogram.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\bubbles\bubble.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\bubbles\bubble_gradient.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\lines\area.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\lines\area_intervals.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\lines\area_stacked.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\lines\area_stepped.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\lines\lines.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\lines\line_intervals.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\other\candlestick.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\other\diff.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\other\geo.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\other\sankey.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\other\trendline.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\pies\3d_exploded.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\pies\donut.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\pies\donut_exploded.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\pies\donut_rotate.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\pies\pie.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\pies\pie_3d.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\pies\pie_diff_border.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\pies\pie_diff_invert.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\pies\pie_diff_opacity.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\pies\pie_diff_radius.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\pies\pie_exploded.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\pies\pie_rotate.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\scatter\scatter.js" />
+    <Content Include="Content\global_assets\js\demo_charts\google\light\scatter\scatter_diff.js" />
+    <Content Include="Content\global_assets\js\demo_charts\pages\dashboard\light\areas.js" />
+    <Content Include="Content\global_assets\js\demo_charts\pages\dashboard\light\bars.js" />
+    <Content Include="Content\global_assets\js\demo_charts\pages\dashboard\light\bullets.js" />
+    <Content Include="Content\global_assets\js\demo_charts\pages\dashboard\light\donuts.js" />
+    <Content Include="Content\global_assets\js\demo_charts\pages\dashboard\light\heatmaps.js" />
+    <Content Include="Content\global_assets\js\demo_charts\pages\dashboard\light\lines.js" />
+    <Content Include="Content\global_assets\js\demo_charts\pages\dashboard\light\pies.js" />
+    <Content Include="Content\global_assets\js\demo_charts\pages\dashboard\light\progress.js" />
+    <Content Include="Content\global_assets\js\demo_charts\pages\dashboard\light\sparklines.js" />
+    <Content Include="Content\global_assets\js\demo_charts\pages\dashboard\light\streamgraph.js" />
+    <Content Include="Content\global_assets\js\demo_charts\pages\ecommerce\light\customers.js" />
+    <Content Include="Content\global_assets\js\demo_charts\pages\profile\light\available_hours.js" />
+    <Content Include="Content\global_assets\js\demo_charts\pages\profile\light\balance_stats.js" />
+    <Content Include="Content\global_assets\js\demo_charts\pages\timelines\light\daily_statistics.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\basic\basic.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\basic\click_event.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\basic\coordinates.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\basic\geolocation.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\controls\adding_controls.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\controls\control_options.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\controls\control_positioning.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\controls\disable_ui.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\drawings\circles.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\drawings\polygons.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\drawings\polylines.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\drawings\rectangles.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\layers\bicycling.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\layers\fusion_tables.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\layers\traffic.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\layers\transit.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\markers\animation.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\markers\simple.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\markers\symbols_custom.js" />
+    <Content Include="Content\global_assets\js\demo_maps\google\markers\symbols_predefined.js" />
+    <Content Include="Content\global_assets\js\demo_maps\vector\vector_maps_demo.js" />
+    <Content Include="Content\global_assets\js\demo_pages\alpaca_advanced.js" />
+    <Content Include="Content\global_assets\js\demo_pages\alpaca_basic.js" />
+    <Content Include="Content\global_assets\js\demo_pages\alpaca_controls.js" />
+    <Content Include="Content\global_assets\js\demo_pages\animations_css3.js" />
+    <Content Include="Content\global_assets\js\demo_pages\animations_velocity_basic.js" />
+    <Content Include="Content\global_assets\js\demo_pages\animations_velocity_examples.js" />
+    <Content Include="Content\global_assets\js\demo_pages\animations_velocity_ui.js" />
+    <Content Include="Content\global_assets\js\demo_pages\blog_single.js" />
+    <Content Include="Content\global_assets\js\demo_pages\chat_layouts.js" />
+    <Content Include="Content\global_assets\js\demo_pages\colors_blue.js" />
+    <Content Include="Content\global_assets\js\demo_pages\colors_brown.js" />
+    <Content Include="Content\global_assets\js\demo_pages\colors_danger.js" />
+    <Content Include="Content\global_assets\js\demo_pages\colors_green.js" />
+    <Content Include="Content\global_assets\js\demo_pages\colors_grey.js" />
+    <Content Include="Content\global_assets\js\demo_pages\colors_indigo.js" />
+    <Content Include="Content\global_assets\js\demo_pages\colors_info.js" />
+    <Content Include="Content\global_assets\js\demo_pages\colors_orange.js" />
+    <Content Include="Content\global_assets\js\demo_pages\colors_pink.js" />
+    <Content Include="Content\global_assets\js\demo_pages\colors_primary.js" />
+    <Content Include="Content\global_assets\js\demo_pages\colors_purple.js" />
+    <Content Include="Content\global_assets\js\demo_pages\colors_slate.js" />
+    <Content Include="Content\global_assets\js\demo_pages\colors_success.js" />
+    <Content Include="Content\global_assets\js\demo_pages\colors_teal.js" />
+    <Content Include="Content\global_assets\js\demo_pages\colors_violet.js" />
+    <Content Include="Content\global_assets\js\demo_pages\colors_warning.js" />
+    <Content Include="Content\global_assets\js\demo_pages\components_buttons.js" />
+    <Content Include="Content\global_assets\js\demo_pages\components_collapsible.js" />
+    <Content Include="Content\global_assets\js\demo_pages\components_dropdowns.js" />
+    <Content Include="Content\global_assets\js\demo_pages\components_media.js" />
+    <Content Include="Content\global_assets\js\demo_pages\components_modals.js" />
+    <Content Include="Content\global_assets\js\demo_pages\components_pagination.js" />
+    <Content Include="Content\global_assets\js\demo_pages\components_popups.js" />
+    <Content Include="Content\global_assets\js\demo_pages\components_progress.js" />
+    <Content Include="Content\global_assets\js\demo_pages\components_scrollspy.js" />
+    <Content Include="Content\global_assets\js\demo_pages\content_cards_content.js" />
+    <Content Include="Content\global_assets\js\demo_pages\content_cards_draggable.js" />
+    <Content Include="Content\global_assets\js\demo_pages\content_cards_footer.js" />
+    <Content Include="Content\global_assets\js\demo_pages\content_cards_header.js" />
+    <Content Include="Content\global_assets\js\demo_pages\content_page_header.js" />
+    <Content Include="Content\global_assets\js\demo_pages\dashboard.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_advanced.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_api.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_basic.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_data_sources.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_extension_autofill.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_extension_buttons_flash.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_extension_buttons_html5.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_extension_buttons_init.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_extension_buttons_print.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_extension_colvis.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_extension_fixed_columns.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_extension_fixed_header.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_extension_key_table.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_extension_reorder.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_extension_row_reorder.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_extension_scroller.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_extension_select.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_responsive.js" />
+    <Content Include="Content\global_assets\js\demo_pages\datatables_sorting.js" />
+    <Content Include="Content\global_assets\js\demo_pages\ecommerce_customers.js" />
+    <Content Include="Content\global_assets\js\demo_pages\ecommerce_orders_history.js" />
+    <Content Include="Content\global_assets\js\demo_pages\ecommerce_product_list.js" />
+    <Content Include="Content\global_assets\js\demo_pages\editor_ckeditor_default.js" />
+    <Content Include="Content\global_assets\js\demo_pages\editor_code.js" />
+    <Content Include="Content\global_assets\js\demo_pages\editor_summernote.js" />
+    <Content Include="Content\global_assets\js\demo_pages\editor_trumbowyg.js" />
+    <Content Include="Content\global_assets\js\demo_pages\extension_blockui.js" />
+    <Content Include="Content\global_assets\js\demo_pages\extension_dnd.js" />
+    <Content Include="Content\global_assets\js\demo_pages\extension_image_cropper.js" />
+    <Content Include="Content\global_assets\js\demo_pages\extra_context_menu.js" />
+    <Content Include="Content\global_assets\js\demo_pages\extra_fab.js" />
+    <Content Include="Content\global_assets\js\demo_pages\extra_idle_timeout.js" />
+    <Content Include="Content\global_assets\js\demo_pages\extra_jgrowl_noty.js" />
+    <Content Include="Content\global_assets\js\demo_pages\extra_pnotify.js" />
+    <Content Include="Content\global_assets\js\demo_pages\extra_session_timeout.js" />
+    <Content Include="Content\global_assets\js\demo_pages\extra_sliders_ion.js" />
+    <Content Include="Content\global_assets\js\demo_pages\extra_sliders_noui.js" />
+    <Content Include="Content\global_assets\js\demo_pages\extra_sweetalert.js" />
+    <Content Include="Content\global_assets\js\demo_pages\extra_trees.js" />
+    <Content Include="Content\global_assets\js\demo_pages\form_actions.js" />
+    <Content Include="Content\global_assets\js\demo_pages\form_checkboxes_radios.js" />
+    <Content Include="Content\global_assets\js\demo_pages\form_controls_extended.js" />
+    <Content Include="Content\global_assets\js\demo_pages\form_dual_listboxes.js" />
+    <Content Include="Content\global_assets\js\demo_pages\form_floating_labels.js" />
+    <Content Include="Content\global_assets\js\demo_pages\form_inputs.js" />
+    <Content Include="Content\global_assets\js\demo_pages\form_input_groups.js" />
+    <Content Include="Content\global_assets\js\demo_pages\form_layouts.js" />
+    <Content Include="Content\global_assets\js\demo_pages\form_multiselect.js" />
+    <Content Include="Content\global_assets\js\demo_pages\form_select2.js" />
+    <Content Include="Content\global_assets\js\demo_pages\form_tags_input.js" />
+    <Content Include="Content\global_assets\js\demo_pages\form_validation.js" />
+    <Content Include="Content\global_assets\js\demo_pages\form_wizard.js" />
+    <Content Include="Content\global_assets\js\demo_pages\fullcalendar_advanced.js" />
+    <Content Include="Content\global_assets\js\demo_pages\fullcalendar_basic.js" />
+    <Content Include="Content\global_assets\js\demo_pages\fullcalendar_formats.js" />
+    <Content Include="Content\global_assets\js\demo_pages\fullcalendar_styling.js" />
+    <Content Include="Content\global_assets\js\demo_pages\gallery.js" />
+    <Content Include="Content\global_assets\js\demo_pages\gallery_library.js" />
+    <Content Include="Content\global_assets\js\demo_pages\internationalization_callbacks.js" />
+    <Content Include="Content\global_assets\js\demo_pages\internationalization_fallback.js" />
+    <Content Include="Content\global_assets\js\demo_pages\internationalization_switch_direct.js" />
+    <Content Include="Content\global_assets\js\demo_pages\internationalization_switch_query.js" />
+    <Content Include="Content\global_assets\js\demo_pages\invoice_archive.js" />
+    <Content Include="Content\global_assets\js\demo_pages\invoice_grid.js" />
+    <Content Include="Content\global_assets\js\demo_pages\invoice_template_default.js" />
+    <Content Include="Content\global_assets\js\demo_pages\job_apply.js" />
+    <Content Include="Content\global_assets\js\demo_pages\job_list.js" />
+    <Content Include="Content\global_assets\js\demo_pages\jqueryui_components.js" />
+    <Content Include="Content\global_assets\js\demo_pages\jqueryui_forms.js" />
+    <Content Include="Content\global_assets\js\demo_pages\jqueryui_interactions.js" />
+    <Content Include="Content\global_assets\js\demo_pages\jqueryui_navigation.js" />
+    <Content Include="Content\global_assets\js\demo_pages\jqueryui_sliders.js" />
+    <Content Include="Content\global_assets\js\demo_pages\layout_fixed_sidebar_custom.js" />
+    <Content Include="Content\global_assets\js\demo_pages\learning.js" />
+    <Content Include="Content\global_assets\js\demo_pages\learning_detailed.js" />
+    <Content Include="Content\global_assets\js\demo_pages\login.js" />
+    <Content Include="Content\global_assets\js\demo_pages\login_validation.js" />
+    <Content Include="Content\global_assets\js\demo_pages\mail_list.js" />
+    <Content Include="Content\global_assets\js\demo_pages\mail_list_read.js" />
+    <Content Include="Content\global_assets\js\demo_pages\mail_list_write.js" />
+    <Content Include="Content\global_assets\js\demo_pages\navbar_components.js" />
+    <Content Include="Content\global_assets\js\demo_pages\navbar_hideable.js" />
+    <Content Include="Content\global_assets\js\demo_pages\navbar_multiple.js" />
+    <Content Include="Content\global_assets\js\demo_pages\navbar_multiple_sticky.js" />
+    <Content Include="Content\global_assets\js\demo_pages\navigation_horizontal_mega.js" />
+    <Content Include="Content\global_assets\js\demo_pages\picker_color.js" />
+    <Content Include="Content\global_assets\js\demo_pages\picker_date.js" />
+    <Content Include="Content\global_assets\js\demo_pages\picker_location.js" />
+    <Content Include="Content\global_assets\js\demo_pages\sidebar_components.js" />
+    <Content Include="Content\global_assets\js\demo_pages\sidebar_secondary.js" />
+    <Content Include="Content\global_assets\js\demo_pages\table_elements.js" />
+    <Content Include="Content\global_assets\js\demo_pages\table_responsive.js" />
+    <Content Include="Content\global_assets\js\demo_pages\task_manager_detailed.js" />
+    <Content Include="Content\global_assets\js\demo_pages\task_manager_grid.js" />
+    <Content Include="Content\global_assets\js\demo_pages\task_manager_list.js" />
+    <Content Include="Content\global_assets\js\demo_pages\timelines.js" />
+    <Content Include="Content\global_assets\js\demo_pages\uploader_bootstrap.js" />
+    <Content Include="Content\global_assets\js\demo_pages\uploader_dropzone.js" />
+    <Content Include="Content\global_assets\js\demo_pages\uploader_plupload.js" />
+    <Content Include="Content\global_assets\js\demo_pages\user_pages_profile.js" />
+    <Content Include="Content\global_assets\js\demo_pages\user_pages_profile_tabbed.js" />
+    <Content Include="Content\global_assets\js\demo_pages\widgets_content.js" />
+    <Content Include="Content\global_assets\js\demo_pages\widgets_stats.js" />
+    <Content Include="Content\global_assets\js\main\bootstrap.bundle.min.js" />
+    <Content Include="Content\global_assets\js\main\jquery.min.js" />
+    <Content Include="Content\global_assets\js\plugins\buttons\hover_dropdown.min.js" />
+    <Content Include="Content\global_assets\js\plugins\buttons\ladda.min.js" />
+    <Content Include="Content\global_assets\js\plugins\buttons\spin.min.js" />
+    <Content Include="Content\global_assets\js\plugins\editors\ace\ace.js" />
+    <Content Include="Content\global_assets\js\plugins\editors\ckeditor\ckeditor.js" />
+    <Content Include="Content\global_assets\js\plugins\editors\summernote\summernote.min.js" />
+    <Content Include="Content\global_assets\js\plugins\editors\trumbowyg\plugins\base64\trumbowyg.base64.min.js" />
+    <Content Include="Content\global_assets\js\plugins\editors\trumbowyg\plugins\cleanpaste\trumbowyg.cleanpaste.min.js" />
+    <Content Include="Content\global_assets\js\plugins\editors\trumbowyg\plugins\colors\trumbowyg.colors.min.js" />
+    <Content Include="Content\global_assets\js\plugins\editors\trumbowyg\plugins\insertaudio\trumbowyg.insertaudio.min.js" />
+    <Content Include="Content\global_assets\js\plugins\editors\trumbowyg\plugins\noembed\trumbowyg.noembed.min.js" />
+    <Content Include="Content\global_assets\js\plugins\editors\trumbowyg\plugins\pasteimage\trumbowyg.pasteimage.min.js" />
+    <Content Include="Content\global_assets\js\plugins\editors\trumbowyg\plugins\preformatted\trumbowyg.preformatted.min.js" />
+    <Content Include="Content\global_assets\js\plugins\editors\trumbowyg\plugins\template\trumbowyg.template.min.js" />
+    <Content Include="Content\global_assets\js\plugins\editors\trumbowyg\plugins\upload\trumbowyg.upload.min.js" />
+    <Content Include="Content\global_assets\js\plugins\editors\trumbowyg\trumbowyg.min.js" />
+    <Content Include="Content\global_assets\js\plugins\extensions\contextmenu.js" />
+    <Content Include="Content\global_assets\js\plugins\extensions\cookie.js" />
+    <Content Include="Content\global_assets\js\plugins\extensions\jquery_ui\core.min.js" />
+    <Content Include="Content\global_assets\js\plugins\extensions\jquery_ui\effects.min.js" />
+    <Content Include="Content\global_assets\js\plugins\extensions\jquery_ui\globalize\cultures\globalize.culture.de-DE.js" />
+    <Content Include="Content\global_assets\js\plugins\extensions\jquery_ui\globalize\cultures\globalize.culture.ja-JP.js" />
+    <Content Include="Content\global_assets\js\plugins\extensions\jquery_ui\globalize\globalize.js" />
+    <Content Include="Content\global_assets\js\plugins\extensions\jquery_ui\interactions.min.js" />
+    <Content Include="Content\global_assets\js\plugins\extensions\jquery_ui\touch.min.js" />
+    <Content Include="Content\global_assets\js\plugins\extensions\jquery_ui\widgets.min.js" />
+    <Content Include="Content\global_assets\js\plugins\extensions\mousewheel.min.js" />
+    <Content Include="Content\global_assets\js\plugins\extensions\rowlink.js" />
+    <Content Include="Content\global_assets\js\plugins\extensions\session_timeout.min.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\inputs\alpaca\alpaca.min.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\inputs\alpaca\price_format.min.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\inputs\autosize.min.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\inputs\duallistbox\duallistbox.min.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\inputs\formatter.min.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\inputs\inputmask.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\inputs\maxlength.min.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\inputs\passy.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\inputs\touchspin.min.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\inputs\typeahead\handlebars.min.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\inputs\typeahead\typeahead.bundle.min.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\selects\bootstrap_multiselect.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\selects\select2.min.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\styling\switch.min.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\styling\switchery.min.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\styling\uniform.min.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\tags\tagsinput.min.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\tags\tokenfield.min.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\validation\validate.min.js" />
+    <Content Include="Content\global_assets\js\plugins\forms\wizards\steps.min.js" />
+    <Content Include="Content\global_assets\js\plugins\internationalization\i18next.min.js" />
+    <Content Include="Content\global_assets\js\plugins\internationalization\i18nextBrowserLanguageDetector.min.js" />
+    <Content Include="Content\global_assets\js\plugins\internationalization\i18nextXHRBackend.min.js" />
+    <Content Include="Content\global_assets\js\plugins\internationalization\jquery-i18next.min.js" />
+    <Content Include="Content\global_assets\js\plugins\loaders\blockui.min.js" />
+    <Content Include="Content\global_assets\js\plugins\loaders\progressbar.min.js" />
+    <Content Include="Content\global_assets\js\plugins\maps\jvectormap\jvectormap.min.js" />
+    <Content Include="Content\global_assets\js\plugins\maps\jvectormap\map_files\countries\germany.js" />
+    <Content Include="Content\global_assets\js\plugins\maps\jvectormap\map_files\countries\usa.js" />
+    <Content Include="Content\global_assets\js\plugins\maps\jvectormap\map_files\world.js" />
+    <Content Include="Content\global_assets\js\plugins\media\cropper.min.js" />
+    <Content Include="Content\global_assets\js\plugins\media\fancybox.min.js" />
+    <Content Include="Content\global_assets\js\plugins\notifications\bootbox.min.js" />
+    <Content Include="Content\global_assets\js\plugins\notifications\jgrowl.min.js" />
+    <Content Include="Content\global_assets\js\plugins\notifications\noty.min.js" />
+    <Content Include="Content\global_assets\js\plugins\notifications\pnotify.min.js" />
+    <Content Include="Content\global_assets\js\plugins\notifications\sweet_alert.min.js" />
+    <Content Include="Content\global_assets\js\plugins\pagination\bs_pagination.min.js" />
+    <Content Include="Content\global_assets\js\plugins\pickers\anytime.min.js" />
+    <Content Include="Content\global_assets\js\plugins\pickers\color\spectrum.js" />
+    <Content Include="Content\global_assets\js\plugins\pickers\daterangepicker.js" />
+    <Content Include="Content\global_assets\js\plugins\pickers\location\autocomplete_addresspicker.js" />
+    <Content Include="Content\global_assets\js\plugins\pickers\location\location.js" />
+    <Content Include="Content\global_assets\js\plugins\pickers\location\typeahead_addresspicker.js" />
+    <Content Include="Content\global_assets\js\plugins\pickers\pickadate\legacy.js" />
+    <Content Include="Content\global_assets\js\plugins\pickers\pickadate\picker.date.js" />
+    <Content Include="Content\global_assets\js\plugins\pickers\pickadate\picker.js" />
+    <Content Include="Content\global_assets\js\plugins\pickers\pickadate\picker.time.js" />
+    <Content Include="Content\global_assets\js\plugins\sliders\ion_rangeslider.min.js" />
+    <Content Include="Content\global_assets\js\plugins\sliders\nouislider.min.js" />
+    <Content Include="Content\global_assets\js\plugins\sliders\slider_pips.min.js" />
+    <Content Include="Content\global_assets\js\plugins\tables\datatables\datatables.min.js" />
+    <Content Include="Content\global_assets\js\plugins\tables\datatables\extensions\autofill.min.js" />
+    <Content Include="Content\global_assets\js\plugins\tables\datatables\extensions\buttons.min.js" />
+    <Content Include="Content\global_assets\js\plugins\tables\datatables\extensions\col_reorder.min.js" />
+    <Content Include="Content\global_assets\js\plugins\tables\datatables\extensions\fixed_columns.min.js" />
+    <Content Include="Content\global_assets\js\plugins\tables\datatables\extensions\fixed_header.min.js" />
+    <Content Include="Content\global_assets\js\plugins\tables\datatables\extensions\jszip\jszip.min.js" />
+    <Content Include="Content\global_assets\js\plugins\tables\datatables\extensions\key_table.min.js" />
+    <Content Include="Content\global_assets\js\plugins\tables\datatables\extensions\natural_sort.js" />
+    <Content Include="Content\global_assets\js\plugins\tables\datatables\extensions\pdfmake\pdfmake.min.js" />
+    <Content Include="Content\global_assets\js\plugins\tables\datatables\extensions\pdfmake\vfs_fonts.min.js" />
+    <Content Include="Content\global_assets\js\plugins\tables\datatables\extensions\responsive.min.js" />
+    <Content Include="Content\global_assets\js\plugins\tables\datatables\extensions\row_reorder.min.js" />
+    <Content Include="Content\global_assets\js\plugins\tables\datatables\extensions\scroller.min.js" />
+    <Content Include="Content\global_assets\js\plugins\tables\datatables\extensions\select.min.js" />
+    <Content Include="Content\global_assets\js\plugins\tables\footable\footable.min.js" />
+    <Content Include="Content\global_assets\js\plugins\trees\fancytree_all.min.js" />
+    <Content Include="Content\global_assets\js\plugins\trees\fancytree_childcounter.js" />
+    <Content Include="Content\global_assets\js\plugins\ui\dragula.min.js" />
+    <Content Include="Content\global_assets\js\plugins\ui\fab.min.js" />
+    <Content Include="Content\global_assets\js\plugins\ui\fullcalendar\core\locales-all.min.js" />
+    <Content Include="Content\global_assets\js\plugins\ui\fullcalendar\core\locales\ar.js" />
+    <Content Include="Content\global_assets\js\plugins\ui\fullcalendar\core\main.min.js" />
+    <Content Include="Content\global_assets\js\plugins\ui\fullcalendar\daygrid\main.min.js" />
+    <Content Include="Content\global_assets\js\plugins\ui\fullcalendar\interaction\main.min.js" />
+    <Content Include="Content\global_assets\js\plugins\ui\fullcalendar\list\main.min.js" />
+    <Content Include="Content\global_assets\js\plugins\ui\fullcalendar\timegrid\main.min.js" />
+    <Content Include="Content\global_assets\js\plugins\ui\headroom.min.js" />
+    <Content Include="Content\global_assets\js\plugins\ui\moment\moment.min.js" />
+    <Content Include="Content\global_assets\js\plugins\ui\moment\moment_locales.min.js" />
+    <Content Include="Content\global_assets\js\plugins\ui\perfect_scrollbar.min.js" />
+    <Content Include="Content\global_assets\js\plugins\ui\prism.min.js" />
+    <Content Include="Content\global_assets\js\plugins\ui\slinky.min.js" />
+    <Content Include="Content\global_assets\js\plugins\ui\sticky.min.js" />
+    <Content Include="Content\global_assets\js\plugins\uploaders\dropzone.min.js" />
+    <Content Include="Content\global_assets\js\plugins\uploaders\fileinput\fileinput.min.js" />
+    <Content Include="Content\global_assets\js\plugins\uploaders\fileinput\plugins\purify.min.js" />
+    <Content Include="Content\global_assets\js\plugins\uploaders\fileinput\plugins\sortable.min.js" />
+    <Content Include="Content\global_assets\js\plugins\uploaders\plupload\plupload.full.min.js" />
+    <Content Include="Content\global_assets\js\plugins\uploaders\plupload\plupload.queue.min.js" />
+    <Content Include="Content\global_assets\js\plugins\velocity\velocity.min.js" />
+    <Content Include="Content\global_assets\js\plugins\velocity\velocity.ui.min.js" />
+    <Content Include="Content\global_assets\js\plugins\visualization\c3\c3.min.js" />
+    <Content Include="Content\global_assets\js\plugins\visualization\d3\d3.min.js" />
+    <Content Include="Content\global_assets\js\plugins\visualization\d3\d3_tooltip.js" />
+    <Content Include="Content\global_assets\js\plugins\visualization\d3\venn.js" />
+    <Content Include="Content\global_assets\js\plugins\visualization\echarts\echarts.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="imges\b10.jpg" />
+    <Content Include="imges\b11.jpg" />
+    <Content Include="imges\b12.jpg" />
+    <Content Include="imges\b13.jpg" />
+    <Content Include="imges\b22.jpg" />
+    <Content Include="imges\b8.jpg" />
+    <Content Include="imges\bbbbbbbb.jpg" />
+    <Content Include="imges\big.jpg" />
+    <Content Include="imges\big4.jpg" />
+    <Content Include="imges\big5.jpg" />
+    <Content Include="imges\bigo.jpg" />
+    <Content Include="imges\fffffffffff.jpg" />
+    <Content Include="imges\img.png" />
+    <Content Include="Scripts\angular-animate.js" />
+    <Content Include="Scripts\angular-animate.min.js" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Assets\fonts\bands-icon.eot" />
+    <Content Include="Assets\fonts\bands-icon.ttf" />
+    <Content Include="Assets\fonts\bands-icon.woff" />
+    <Content Include="Assets\fonts\fa-brands-400.eot" />
+    <Content Include="Assets\fonts\fa-brands-400.ttf" />
+    <Content Include="Assets\fonts\fa-brands-400.woff" />
+    <Content Include="Assets\fonts\fa-brands-400.woff2" />
+    <Content Include="Assets\fonts\fa-regular-400.eot" />
+    <Content Include="Assets\fonts\fa-regular-400.ttf" />
+    <Content Include="Assets\fonts\fa-regular-400.woff" />
+    <Content Include="Assets\fonts\fa-regular-400.woff2" />
+    <Content Include="Assets\fonts\fa-solid-900.eot" />
+    <Content Include="Assets\fonts\fa-solid-900.ttf" />
+    <Content Include="Assets\fonts\fa-solid-900.woff" />
+    <Content Include="Assets\fonts\fa-solid-900.woff2" />
+    <Content Include="Assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\fonts\FontAwesome.otf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\fonts\icofont.eot" />
+    <Content Include="Assets\fonts\icofont.ttf" />
+    <Content Include="Assets\fonts\icofont.woff" />
+    <Content Include="Assets\fonts\industrio-icon.eot" />
+    <Content Include="Assets\fonts\industrio-icon.ttf" />
+    <Content Include="Assets\fonts\industrio-icon.woff" />
+    <Content Include="Assets\fonts\revicons.eot" />
+    <Content Include="Assets\fonts\revicons.ttf" />
+    <Content Include="Assets\fonts\revicons.woff" />
+    <Content Include="Content\assets\font\fontawesome-webfont.eot" />
+    <Content Include="Content\assets\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\assets\font\fontawesome-webfont.woff" />
+    <Content Include="Content\assets\font\FontAwesome.otf" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-brands-400.eot" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-brands-400.ttf" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-brands-400.woff" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-brands-400.woff2" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-brands-400d41d.eot" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-regular-400.eot" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-regular-400.ttf" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-regular-400.woff" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-regular-400.woff2" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-regular-400d41d.eot" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-solid-900.eot" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-solid-900.ttf" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-solid-900.woff" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-solid-900.woff2" />
+    <Content Include="Content\global_assets\css\icons\fontawesome\fonts\fa-solid-900d41d.eot" />
+    <Content Include="Content\global_assets\css\icons\icomoon\fonts\icomoond41d.eot" />
+    <Content Include="Content\global_assets\css\icons\icomoon\fonts\icomoone627.eot" />
+    <Content Include="Content\global_assets\css\icons\icomoon\fonts\icomoone627.ttf" />
+    <Content Include="Content\global_assets\css\icons\icomoon\fonts\icomoone627.woff" />
+    <Content Include="Content\global_assets\css\icons\material\fonts\material-icons119d.ttf" />
+    <Content Include="Content\global_assets\css\icons\material\fonts\material-icons119d.woff" />
+    <Content Include="Scripts\angular-animate.min.js.map" />
+    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\dirPagination.js" />
+    <Content Include="Scripts\dirPagination.tpl.html" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.map" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <None Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.6.0.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Online\Index.cshtml" />
+    <Content Include="Views\Online\_LayoutOnline.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1333</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44315/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
